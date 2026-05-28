@@ -1,0 +1,19 @@
+.rockfish {
+  --panel-bg: #31518e;
+  --image-position: center;
+  --title-size: clamp(52px, 7.7vw, 150px);
+  --title-scale: 0.94;
+  --mobile-title-scale: 0.72;
+}
+
+@media (min-width: 768px) {
+  .rockfish {
+    --mobile-title-scale: 0.72;
+  }
+}
+
+@media (min-width: 1280px) {
+  .rockfish {
+    --mobile-title-scale: 1;
+  }
+}

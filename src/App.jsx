@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Loader from "./components/Loader.jsx";
+import PortfolioNav from "./components/PortfolioNav.jsx";
 import IndexPage from "./pages/IndexPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ProjectPlaceholder from "./pages/ProjectPlaceholder.jsx";
@@ -14,25 +15,75 @@ const mainPages = [
 ];
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  const [loaderVisible, setLoaderVisible] = useState(true);
+  const [loaderLeaving, setLoaderLeaving] = useState(false);
+  const [homeIntro, setHomeIntro] = useState(false);
   const [page, setPage] = useState("home");
   const [activeProject, setActiveProject] = useState(null);
-  const scrollerRef = useRef(null);
+  const [previousView, setPreviousView] = useState(null);
+  const [transitionKind, setTransitionKind] = useState("slide-left");
+  const [activeHomeIndex, setActiveHomeIndex] = useState(0);
+  const [previousHomeIndex, setPreviousHomeIndex] = useState(null);
+  const [homeDirection, setHomeDirection] = useState(1);
   const wheelLockRef = useRef(false);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setLoading(false), 1600);
-    return () => window.clearTimeout(timer);
+    const leaveTimer = window.setTimeout(() => {
+      setLoaderLeaving(true);
+      setHomeIntro(true);
+    }, 1400);
+    const removeTimer = window.setTimeout(() => setLoaderVisible(false), 2400);
+    const introTimer = window.setTimeout(() => setHomeIntro(false), 3100);
+
+    return () => {
+      window.clearTimeout(leaveTimer);
+      window.clearTimeout(removeTimer);
+      window.clearTimeout(introTimer);
+    };
   }, []);
+
+  const transitionTo = (nextPage, options = {}) => {
+    const nextProject = options.project ?? activeProject;
+    const kind = options.kind ?? "slide-left";
+
+    setPreviousView({
+      page,
+      activeProject,
+      key: `${page}-${activeProject ?? "none"}-${Date.now()}`,
+    });
+    setTransitionKind(kind);
+    setActiveProject(nextProject);
+    setPage(nextPage);
+
+    window.setTimeout(() => {
+      setPreviousView(null);
+    }, 920);
+  };
 
   const openProject = (id) => {
     setActiveProject(id);
-    setPage("project");
+    transitionTo("project", {
+      project: id,
+      kind: "cover",
+    });
+  };
+
+  const navigateHome = () => {
+    setPreviousView(null);
+    setLoaderVisible(true);
+    setLoaderLeaving(false);
+    setPage("home");
+
+    window.setTimeout(() => {
+      setLoaderLeaving(true);
+      setHomeIntro(true);
+    }, 700);
+    window.setTimeout(() => setLoaderVisible(false), 1600);
+    window.setTimeout(() => setHomeIntro(false), 2300);
   };
 
   useEffect(() => {
-    const scroller = scrollerRef.current;
-    if (loading || page !== "home" || !scroller) return undefined;
+    if (loaderVisible || page !== "home") return undefined;
 
     const handleWheel = (event) => {
       if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
@@ -42,42 +93,78 @@ export default function App() {
       wheelLockRef.current = true;
 
       const direction = event.deltaY > 0 ? 1 : -1;
-      const width = scroller.clientWidth;
-      const current = Math.round(scroller.scrollLeft / width);
-      const next = Math.max(0, Math.min(mainPages.length - 1, current + direction));
+      const next = Math.max(0, Math.min(mainPages.length - 1, activeHomeIndex + direction));
 
-      scroller.scrollTo({ left: next * width, behavior: "smooth" });
-      window.setTimeout(() => {
+      if (next === activeHomeIndex) {
         wheelLockRef.current = false;
-      }, 650);
+        return;
+      }
+
+      setHomeDirection(direction);
+      setPreviousHomeIndex(activeHomeIndex);
+      setActiveHomeIndex(next);
+      window.setTimeout(() => {
+        setPreviousHomeIndex(null);
+        wheelLockRef.current = false;
+      }, 1040);
     };
 
-    scroller.addEventListener("wheel", handleWheel, { passive: false });
-    return () => scroller.removeEventListener("wheel", handleWheel);
-  }, [loading, page]);
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => window.removeEventListener("wheel", handleWheel);
+  }, [activeHomeIndex, loaderVisible, page]);
 
-  if (loading) return <Loader />;
+  const navigatePage = (nextPage) => {
+    if (nextPage === page) return;
+    transitionTo(nextPage, {
+      kind: "cover",
+    });
+  };
 
-  if (page === "index") return <IndexPage setPage={setPage} openProject={openProject} />;
-  if (page === "about") return <AboutPage setPage={setPage} />;
-  if (page === "project") {
-    return <ProjectPlaceholder id={activeProject} setPage={setPage} />;
-  }
+  const renderHomeFrame = (index) => {
+    const { id, Component } = mainPages[index];
+    return <Component onOpen={() => openProject(id)} />;
+  };
 
-  return (
+  const renderHome = () => (
     <>
-      <header className="home-fixed-nav" aria-label="Main navigation">
-        <img src="/assets/logo-bk.svg" alt="You Bin logo" />
-        <nav>
-          <button onClick={() => setPage("index")}>Index</button>
-          <button onClick={() => setPage("about")}>About</button>
-        </nav>
-      </header>
-      <main className="horizontal-home" ref={scrollerRef}>
-        {mainPages.map(({ id, Component }) => (
-          <Component key={id} onOpen={() => openProject(id)} />
-        ))}
+      <PortfolioNav navigateHome={navigateHome} setPage={navigatePage} />
+      <main
+        className={`horizontal-home home-carousel${homeIntro ? " is-home-intro" : ""}${
+          previousHomeIndex !== null ? " is-home-switching" : ""
+        } home-carousel--${homeDirection > 0 ? "next" : "prev"}`}
+      >
+        {previousHomeIndex !== null && (
+          <div className="home-panel home-panel--old" key={`old-${previousHomeIndex}`} aria-hidden="true">
+            {renderHomeFrame(previousHomeIndex)}
+          </div>
+        )}
+        <div className="home-panel home-panel--new" key={`new-${activeHomeIndex}`}>
+          {renderHomeFrame(activeHomeIndex)}
+        </div>
       </main>
     </>
+  );
+
+  const renderView = (viewPage, projectId = activeProject, isPrevious = false) => {
+    if (viewPage === "index") return <IndexPage setPage={navigatePage} openProject={openProject} navigateHome={navigateHome} />;
+    if (viewPage === "about") return <AboutPage setPage={navigatePage} navigateHome={navigateHome} />;
+    if (viewPage === "project") {
+      return <ProjectPlaceholder id={projectId} setPage={navigatePage} navigateHome={navigateHome} />;
+    }
+    return renderHome(isPrevious);
+  };
+
+  return (
+    <div className={`app-stage app-stage--${transitionKind}${previousView ? " is-transitioning" : ""}`}>
+      {previousView && (
+        <div className="page-layer page-layer--old" key={previousView.key} aria-hidden="true">
+          {renderView(previousView.page, previousView.activeProject, true)}
+        </div>
+      )}
+      <div className="page-layer page-layer--new" key={`${page}-${activeProject ?? "none"}`}>
+        {renderView(page, activeProject)}
+      </div>
+      {loaderVisible && <Loader isLeaving={loaderLeaving} />}
+    </div>
   );
 }

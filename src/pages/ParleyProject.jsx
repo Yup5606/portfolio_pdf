@@ -1,3 +1,6 @@
+import "../styles/parley.css";
+import PortfolioNav from "../components/PortfolioNav.jsx";
+
 const base = "/assets/parley/";
 const src = (file) => `${base}${file}`;
 const icon = (file) => `${base}icon/${file}`;
@@ -54,14 +57,6 @@ function CaseTitle({ title }) {
   );
 }
 
-function BackButton({ setPage }) {
-  return (
-    <button className="parley-back" type="button" onClick={() => setPage("home")}>
-      Back
-    </button>
-  );
-}
-
 function PieChart({ variant }) {
   return (
     <figure className={`parley-pie parley-pie--${variant}`}>
@@ -72,10 +67,10 @@ function PieChart({ variant }) {
   );
 }
 
-export default function ParleyProject({ setPage }) {
+export default function ParleyProject({ setPage, navigateHome }) {
   return (
     <main className="parley-page">
-      <BackButton setPage={setPage} />
+      <PortfolioNav navigateHome={navigateHome} setPage={setPage} />
 
       <section className="parley-hero" aria-labelledby="parley-title">
         <div className="parley-hero__circle" aria-hidden="true" />
@@ -87,7 +82,7 @@ export default function ParleyProject({ setPage }) {
         </div>
         <img className="parley-hero__mockup" src={icon("main_1.svg")} alt="Parley 메인 화면 목업" />
         <div className="parley-hero__links">
-          <a href="https://www.parley.tv/" target="_blank" rel="noreferrer">사이트 보러가기</a>
+          <a href="https://parleyfortheocean-redesign.netlify.app/" target="_blank" rel="noreferrer">사이트 보러가기</a>
           <a href="#report">결과 보고서 보러가기</a>
         </div>
         <dl className="parley-meta">
@@ -226,8 +221,8 @@ export default function ParleyProject({ setPage }) {
         <div className="code-rows">
           <article>
             <div className="code-images code-images--overlap">
-              <img src={src("변수값.jpg")} alt="변수값 코드" />
-              <img src={src("공용값.jpg")} alt="공용 class 코드" />
+              <img src={src("variables.jpg")} alt="변수값 코드" />
+              <img src={src("common-classes.jpg")} alt="공용 class 코드" />
             </div>
             <div>
               <h3>변수 사용 및 공용 값 설정</h3>
@@ -235,14 +230,14 @@ export default function ParleyProject({ setPage }) {
             </div>
           </article>
           <article>
-            <img src={src("폴더정리.jpg")} alt="폴더 정리 화면" />
+            <img src={src("folder-structure.jpg")} alt="폴더 정리 화면" />
             <div>
               <h3>폴더 정리 및 반응형 구현</h3>
               <p>페이지별 html / css / javascript / images폴더를 구조화 하였고 특히 css는 .rwd 로 나누어 반응형을 대비 할 수 있게 수정했습니다.</p>
             </div>
           </article>
           <article>
-            <img src={src("회의록.jpg")} alt="팀 프로젝트 회의록" />
+            <img src={src("meeting-notes.jpg")} alt="팀 프로젝트 회의록" />
             <div>
               <h3>회의 및 회의록 기록</h3>
               <p>회의를 통해 콘텐츠의 구성 방향, 디자인 수정 사항, 역할 분담 및 일정 등을 조율 하였고 이를 바탕으로 협업에선 회의부터 기록까지 모든 과정의 중요성을 확인했습니다.</p>
@@ -256,11 +251,11 @@ export default function ParleyProject({ setPage }) {
         <div className="screen-pair">
           <article>
             <span>As is</span>
-            <img src={src("팔리 목업 pc.svg")} alt="기존 데스크톱 구조" />
+            <img src={src("parley-mockup-pc.svg")} alt="기존 데스크톱 구조" />
           </article>
           <article>
             <span>To be</span>
-            <img src={src("팔리 목업 tb.svg")} alt="개선 데스크톱 구조" />
+            <img src={src("parley-mockup-tablet.svg")} alt="개선 데스크톱 구조" />
           </article>
         </div>
         <h2>Mobile Structure</h2>

@@ -1,7 +1,9 @@
-export default function AboutPage({ setPage }) {
+import PortfolioNav from "../components/PortfolioNav.jsx";
+
+export default function AboutPage({ setPage, navigateHome }) {
   return (
     <section className="simple-page about-page">
-      <button className="text-link" onClick={() => setPage("home")}>Back</button>
+      <PortfolioNav navigateHome={navigateHome} setPage={setPage} />
       <h1>About</h1>
       <p>
         UI/UX Designer You Bin. 브랜드의 이미지와 사용자의 흐름을 연결하는
