@@ -1,0 +1,143 @@
+/*반응형 영역*/
+@media (min-width: 768px) {
+  .site-nav,
+  .main-nav {
+    top: 18px;
+    right: 20px;
+    left: 20px;
+    padding: 5px 18px;
+  }
+
+  .site-nav__logo,
+  .main-nav-logo {
+    width: 3.2em;
+  }
+
+  .site-nav nav,
+  .main-nav nav {
+    font-size: 0.78em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .site-nav,
+  .main-nav {
+    top: 24px;
+    right: 34px;
+    left: 34px;
+    padding: 5px 22px;
+  }
+
+  .site-nav__logo,
+  .main-nav-logo {
+    width: 4em;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-nav nav,
+  .main-nav nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap: 0;
+    max-width: calc(100vw - 78px);
+  }
+
+  .project-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 98px 18px 54px;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(42px, 16vw, 74px);
+  }
+
+  .project-hero p {
+    font-size: 16px;
+  }
+
+  .project-actions {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .project-actions a {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image-story,
+  .content-section {
+    padding: 64px 18px;
+  }
+
+  .image-story,
+  .section-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .image-story h2,
+  .section-heading h2 {
+    font-size: clamp(30px, 9vw, 48px);
+  }
+
+  .screen-grid,
+  .screen-grid--three,
+  .frame-grid,
+  .phone-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .project-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .hero-circle {
+    transform: translate(-50%, -36%);
+  }
+
+  .project-actions {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    grid-column: 1;
+    margin-top: 12px;
+  }
+
+  .image-story,
+  .section-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .phone-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .project-hero {
+    padding-right: 72px;
+    padding-left: 72px;
+  }
+
+  .content-section,
+  .image-story {
+    padding-right: 72px;
+    padding-left: 72px;
+  }
+}
