@@ -413,7 +413,7 @@
 }
 
 /*반응형 영역*/
-@media (max-width: 47.99em) {
+@media (max-width: 767px) {
   .index-hero {
     min-height: 54vh;
     padding: 92px 18px 18px;
@@ -458,7 +458,7 @@
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 768px) {
   .index-hero {
     min-height: 40vw;
   }
@@ -522,7 +522,7 @@
   }
 }
 
-@media (min-width: 80em) {
+@media (min-width: 1280px) {
   .index-hero {
     min-height: 41.5vw;
   }
@@ -569,7 +569,7 @@
   }
 }
 
-@media (min-width: 90em) {
+@media (min-width: 1440px) {
   .panel-count {
     font-size: 3em;
   }

@@ -150,41 +150,6 @@ select {
   background: var(--white);
 }
 
-@media (min-width: 768px) {
-  .site-nav,
-  .main-nav {
-    top: 18px;
-    right: 20px;
-    left: 20px;
-    padding: 5px 18px;
-  }
-
-  .site-nav__logo,
-  .main-nav-logo {
-    width: 3.2em;
-  }
-
-  .site-nav nav,
-  .main-nav nav {
-    font-size: 0.78em;
-  }
-}
-
-@media (min-width: 1280px) {
-  .site-nav,
-  .main-nav {
-    top: 24px;
-    right: 34px;
-    left: 34px;
-    padding: 5px 22px;
-  }
-
-  .site-nav__logo,
-  .main-nav-logo {
-    width: 4em;
-  }
-}
-
 /*프로젝트 공통 히어로 영역*/
 .project-page {
   background: var(--white);
@@ -424,6 +389,41 @@ select {
 }
 
 /*반응형 영역*/
+@media (min-width: 768px) {
+  .site-nav,
+  .main-nav {
+    top: 18px;
+    right: 20px;
+    left: 20px;
+    padding: 5px 18px;
+  }
+
+  .site-nav__logo,
+  .main-nav-logo {
+    width: 3.2em;
+  }
+
+  .site-nav nav,
+  .main-nav nav {
+    font-size: 0.78em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .site-nav,
+  .main-nav {
+    top: 24px;
+    right: 34px;
+    left: 34px;
+    padding: 5px 22px;
+  }
+
+  .site-nav__logo,
+  .main-nav-logo {
+    width: 4em;
+  }
+}
+
 @media (max-width: 768px) {
   .site-nav nav,
   .main-nav nav {
