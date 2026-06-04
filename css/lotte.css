@@ -1,0 +1,38 @@
+/*롯데 히어로 영역*/
+.lotte-hero-static {
+  color: var(--white);
+  background: linear-gradient(115deg, #cf2229 0 55%, #f6ded3 55% 100%);
+}
+
+.lotte-mockup-static {
+  position: relative;
+  z-index: 2;
+  width: min(54vw, 880px);
+  margin-left: auto;
+  filter: drop-shadow(0 28px 44px rgba(80, 0, 0, 0.25));
+}
+
+/*반응형 영역*/
+@media (max-width: 768px) {
+  .lotte-hero-static {
+    background: linear-gradient(165deg, #cf2229 0 58%, #f6ded3 58% 100%);
+  }
+
+  .lotte-mockup-static {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .lotte-mockup-static {
+    width: min(100%, 820px);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .lotte-mockup-static {
+    width: min(52vw, 820px);
+  }
+}

@@ -1,0 +1,139 @@
+/*어바웃 인터랙션 보강 영역*/
+.about-page {
+  --about-cursor-x: 50%;
+  --about-cursor-y: 30%;
+}
+
+.about-page::after {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(circle at var(--about-cursor-x) var(--about-cursor-y), rgba(63, 95, 85, 0.14), rgba(63, 95, 85, 0) 24%),
+    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0) 30%);
+  opacity: 0.78;
+  transition: opacity 0.3s ease;
+}
+
+.about-side-title,
+.about-photo-wrap,
+.skill-card {
+  will-change: transform;
+}
+
+.keyword-list li,
+.contact-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.keyword-list li::before {
+  position: absolute;
+  top: var(--card-y, 50%);
+  left: var(--card-x, 50%);
+  z-index: 1;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(63, 95, 85, 0.14), transparent 68%);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.24s ease;
+}
+
+.keyword-list li:hover::before {
+  opacity: 1;
+}
+
+.keyword-list li strong,
+.keyword-list li span {
+  position: relative;
+  z-index: 2;
+}
+
+.history-track {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(63, 95, 85, 0.42) rgba(63, 95, 85, 0.08);
+  cursor: grab;
+}
+
+.history-track.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.history-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.history-track::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(63, 95, 85, 0.08);
+}
+
+.history-track::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(63, 95, 85, 0.42);
+}
+
+.skill-card .skill-dots span {
+  transform: scaleX(0.62);
+  transform-origin: left;
+}
+
+.skill-card:hover .skill-dots span {
+  transform: scaleX(1);
+}
+
+.contact-card::after {
+  position: absolute;
+  top: var(--contact-y, 50%);
+  left: var(--contact-x, 50%);
+  z-index: 0;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(63, 95, 85, 0.13), transparent 70%);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.24s ease;
+}
+
+.contact-card:hover::after {
+  opacity: 1;
+}
+
+.contact-message,
+.contact-links {
+  position: relative;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page::after,
+  .about-side-title,
+  .about-photo-wrap,
+  .skill-card,
+  .keyword-list li::before,
+  .contact-card::after {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-side-title,
+  .about-photo-wrap,
+  .skill-card,
+  .skill-card:hover {
+    transform: none;
+  }
+}

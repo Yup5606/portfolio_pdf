@@ -2,12 +2,111 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/common/youbin.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>You Bin Portfolio</title>
+    <title>Park Yubin Portfolio</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="home-page is-loading">
+    <!--로딩 영역-->
+    <div class="page-loader" aria-hidden="true">
+      <p class="page-loader-text page-loader-portfolio">Portfolio</p>
+      <p class="page-loader-text page-loader-name">Park Youbin</p>
+      <p class="page-loader-text page-loader-field">UI UX Designer</p>
+      <p class="page-loader-text page-loader-copyright">2026</p>
+      <img class="page-loader-logo" src="image/common/youbin.svg" alt="" />
+    </div>
+
+    <!--헤더 영역-->
+    <header class="main-nav" aria-label="Portfolio navigation">
+      <a class="main-nav-logo" href="index.html" aria-label="Go home">
+        <img src="image/common/youbin.svg" alt="You Bin logo" />
+      </a>
+      <nav>
+        <a href="project-index.html">Index</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <!--메인 영역-->
+    <main class="main-visual" data-main-slider>
+      <!--팔리 프로젝트 영역-->
+      <section class="main-panel main-panel-parley is-active" data-main-panel>
+        <img class="panel-bg" src="image/main/main_parley.jpg" alt="Parley for the Ocean 메인 이미지" />
+        <div class="panel-shade"></div>
+        <a class="panel-link" href="parley.html" aria-label="Parley for the Ocean 프로젝트 보기"></a>
+        <p class="panel-scroll">Scroll</p>
+        <div class="panel-meta">
+          <span>Team Project</span>
+          <span>Responsive Web</span>
+          <span>UI/UX</span>
+          <span>Publishing</span>
+        </div>
+        <div class="panel-title-wrap">
+          <p class="panel-count">(01)</p>
+          <h1 class="panel-title"><a href="parley.html">Parley for the Ocean</a></h1>
+        </div>
+        <footer class="panel-footer">
+          <p>© 2026 PARK YOUBIN. All Rights Reserved.</p>
+          <div class="panel-footer-links">
+            <a href="https://github.com/yup5606" target="_blank" rel="noreferrer">Github</a>
+            <a href="https://www.instagram.com/madeby_yup?utm_source=qr" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </footer>
+      </section>
+
+      <!--롯데 프로젝트 영역-->
+      <section class="main-panel main-panel-lotte" data-main-panel>
+        <img class="panel-bg" src="image/main/main_lotte.jpg" alt="Lotte GRS 메인 이미지" />
+        <div class="panel-shade"></div>
+        <a class="panel-link" href="lotte.html" aria-label="Lotte GRS 프로젝트 보기"></a>
+        <p class="panel-scroll">Scroll</p>
+        <div class="panel-meta">
+          <span>Personal Project</span>
+          <span>Corporate Renewal</span>
+          <span>UI/UX</span>
+          <span>Publishing</span>
+        </div>
+        <div class="panel-title-wrap">
+          <p class="panel-count">(02)</p>
+          <h2 class="panel-title"><a href="lotte.html">Lotte GRS</a></h2>
+        </div>
+        <footer class="panel-footer">
+          <p>© 2026 PARK YOUBIN. All Rights Reserved.</p>
+          <div class="panel-footer-links">
+            <a href="https://github.com/yup5606" target="_blank" rel="noreferrer">Github</a>
+            <a href="https://www.instagram.com/madeby_yup?utm_source=qr" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </footer>
+      </section>
+
+      <!--락피쉬 프로젝트 영역-->
+      <section class="main-panel main-panel-rockfish" data-main-panel>
+        <img class="panel-bg" src="image/main/main_rockfish.jpg" alt="Rockfish Weatherwear 메인 이미지" />
+        <div class="panel-shade"></div>
+        <a class="panel-link" href="rockfish.html" aria-label="Rockfish Weatherwear 프로젝트 보기"></a>
+        <p class="panel-scroll">Scroll</p>
+        <div class="panel-meta">
+          <span>Brand Redesign</span>
+          <span>Experience Design</span>
+          <span>UI/UX</span>
+          <span>Publishing</span>
+        </div>
+        <div class="panel-title-wrap">
+          <p class="panel-count">(03)</p>
+          <h2 class="panel-title"><a href="rockfish.html">Rockfish weatherwear</a></h2>
+        </div>
+        <footer class="panel-footer">
+          <p>© 2026 PARK YOUBIN. All Rights Reserved.</p>
+          <div class="panel-footer-links">
+            <a href="https://github.com/yup5606" target="_blank" rel="noreferrer">Github</a>
+            <a href="https://www.instagram.com/madeby_yup?utm_source=qr" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,149 @@
+/*팔리 히어로 영역*/
+.parley-hero {
+  color: #101828;
+  background: linear-gradient(115deg, #f7f7f2 0 46%, #d9e7f5 46% 100%);
+}
+
+.parley-hero h1,
+.parley-hero .project-actions a {
+  color: #365b7d;
+}
+
+.wild-logo {
+  margin-bottom: 4px;
+  color: #7b9bb6;
+  font-family: var(--font-wild);
+  font-size: clamp(48px, 6vw, 104px);
+  line-height: 1;
+}
+
+/*팔리 목업 영역*/
+.parley-mockups {
+  position: relative;
+  z-index: 2;
+  min-height: min(62vw, 680px);
+}
+
+.parley-desktop {
+  width: min(54vw, 900px);
+  margin-left: auto;
+  filter: drop-shadow(0 28px 40px rgba(33, 56, 79, 0.22));
+}
+
+.parley-mobile {
+  position: absolute;
+  right: min(4vw, 76px);
+  bottom: 0;
+  width: min(16vw, 230px);
+  filter: drop-shadow(0 20px 34px rgba(33, 56, 79, 0.24));
+}
+
+/*팔리 스토리 영역*/
+.image-story--dark {
+  color: var(--white);
+  background: #071a2d;
+}
+
+/*역할 및 툴 영역*/
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr)) minmax(240px, 0.8fr);
+  gap: 18px;
+}
+
+.role-grid article,
+.tool-list {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.role-grid article {
+  padding-bottom: 26px;
+}
+
+.role-grid article img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.role-grid h3 {
+  margin: 24px 26px 8px;
+  color: var(--blue);
+  font-size: clamp(20px, 1.8vw, 30px);
+}
+
+.role-grid p {
+  margin: 0 26px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.tool-list {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 28px;
+}
+
+.tool-list span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tool-list img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/*반응형 영역*/
+@media (max-width: 768px) {
+  .parley-hero {
+    background: linear-gradient(160deg, #f7f7f2 0 52%, #d9e7f5 52% 100%);
+  }
+
+  .parley-mobile {
+    width: min(34vw, 170px);
+  }
+
+  .role-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .parley-mockups {
+    min-height: auto;
+  }
+
+  .parley-desktop {
+    width: min(100%, 820px);
+    margin: 0 auto;
+  }
+
+  .parley-mobile {
+    right: 6%;
+    width: min(26vw, 210px);
+  }
+
+  .role-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .parley-desktop {
+    width: min(52vw, 820px);
+  }
+}
