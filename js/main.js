@@ -3,6 +3,8 @@
   const panels = slider ? Array.from(slider.querySelectorAll("[data-main-panel]")) : [];
   let activeIndex = panels.findIndex((panel) => panel.classList.contains("is-active"));
   let isChanging = false;
+  let wheelDelta = 0;
+  let wheelResetTimer;
 
   if (!panels.length) {
     return;
@@ -13,6 +15,8 @@
 
   const loaderStartedAt = window.performance.now();
   const loaderDuration = 2500;
+  const transitionDuration = 1180;
+  const wheelThreshold = 80;
   let pageLoaded = document.readyState === "complete";
   let loaderFinished = false;
 
@@ -45,7 +49,7 @@
     const safeIndex = (nextIndex + panels.length) % panels.length;
 
     if (safeIndex === activeIndex || isChanging) {
-      return;
+      return false;
     }
 
     const direction = nextIndex > activeIndex ? 1 : -1;
@@ -70,7 +74,9 @@
       nextPanel.style.zIndex = "2";
       activeIndex = safeIndex;
       isChanging = false;
-    }, 930);
+    }, transitionDuration);
+
+    return true;
   };
 
   window.addEventListener(
@@ -81,12 +87,24 @@
         return;
       }
 
-      if (Math.abs(event.deltaY) < 18) {
+      event.preventDefault();
+
+      if (isChanging) {
         return;
       }
 
-      event.preventDefault();
-      showPanel(activeIndex + (event.deltaY > 0 ? 1 : -1));
+      wheelDelta += event.deltaY;
+      window.clearTimeout(wheelResetTimer);
+      wheelResetTimer = window.setTimeout(() => {
+        wheelDelta = 0;
+      }, 160);
+
+      if (Math.abs(wheelDelta) < wheelThreshold) {
+        return;
+      }
+
+      showPanel(activeIndex + (wheelDelta > 0 ? 1 : -1));
+      wheelDelta = 0;
     },
     { passive: false }
   );

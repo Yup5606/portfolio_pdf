@@ -232,7 +232,6 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background: #101828;
 }
 
 .main-panel {
@@ -241,27 +240,28 @@
   min-height: 100vh;
   overflow: hidden;
   color: var(--white);
-  background: #101828;
-  transform: translateX(100%);
-  transition: transform 0.9s ease;
-  will-change: transform;
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 1.15s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.72s ease;
+  will-change: transform, opacity;
 }
 
 .main-panel.is-active {
-  transform: translateX(0);
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .main-panel.from-left {
-  transform: translateX(-100%);
+  transform: translate3d(-100%, 0, 0);
 }
 
 .main-panel.from-right {
-  transform: translateX(100%);
+  transform: translate3d(100%, 0, 0);
 }
 
 .main-panel.from-left.is-active,
 .main-panel.from-right.is-active {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .panel-bg,
@@ -284,7 +284,7 @@
 .panel-shade {
   z-index: 1;
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.2);
+  background: transparent;
 }
 
 .panel-link {
@@ -384,20 +384,23 @@
 /*패널 푸터 영역*/
 .panel-footer {
   position: absolute;
-  display: flex;
-  right: 1.8em;
+  right: 0;
   bottom: 2em;
-  left: 0.8em;
+  left: 0;
+  display: flex;
   align-items: center;
-  gap: 0.4em;
-  margin-left: auto;
-  padding-top: 1em;
+  justify-content: space-between;
+  gap: 1.5em;
+  padding: 1em 1.8em 0;
   border-top: 0.1em solid rgba(255, 255, 255, 0.9);
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.7em;
   font-weight: 500;
   letter-spacing: 0;
-  width: 120%;
+}
+
+.panel-footer p {
+  margin: 0;
 }
 
 .panel-footer-links {
@@ -508,12 +511,13 @@
   }
 
   .panel-footer {
-    right: 3.5em;
+    right: 0;
     bottom: 1.5em;
-    left: 3.5em;
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 3em;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+    padding: 1.2em 3.5em 0;
     font-size: 0.9em;
   }
 }
@@ -558,8 +562,10 @@
   }
 
   .panel-footer {
-    right: 5.6em;
-    left: 5.6em;
+    right: 0;
+    left: 0;
+    padding-right: 5.6em;
+    padding-left: 5.6em;
   }
 }
 
