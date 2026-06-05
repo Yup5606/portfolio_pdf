@@ -11,30 +11,34 @@
     <link rel="stylesheet" href="css/lotte_rwd.css" />
   </head>
   <body class="project-page lotte-project">
-    <!--헤더 영역-->
-    <header class="site-nav" aria-label="Portfolio navigation">
-      <a class="site-nav__logo" href="index.html" aria-label="Go home">
-        <img src="image/common/youbin.svg" alt="You Bin logo" />
-      </a>
-      <nav>
-        <a href="project-index.html">Index</a>
-        <a href="about.html">About</a>
-      </nav>
-    </header>
+
+    <div data-include="partials/header.html" data-header-variant="project"></div>
 
     <!--메인 영역-->
     <main>
       <!--히어로 영역-->
-      <section class="project-hero lotte-hero-static">
-        <div class="hero-circle"></div>
-        <div class="project-hero__copy">
-          <img src="image/lotte/lotte_GRS_logo_white.svg" alt="Lotte GRS" />
+      <section class="project-showcase-hero lotte-hero">
+        <div class="project-showcase-circle"></div>
+        <div class="project-showcase-copy">
+          <img class="project-showcase-logo" src="image/lotte/lotte_GRS_logo_white.svg" alt="Lotte GRS" />
           <h1>Lotte GRS</h1>
           <p>브랜드 경험을 선명하게 정리한 반응형 메인 페이지</p>
         </div>
-        <img class="lotte-mockup-static" src="image/lotte/mockup_lotte.svg" alt="롯데 GRS 목업" />
-        <div class="project-actions">
+        <div class="project-showcase-mockup">
+          <img src="image/lotte/mockup_lotte.svg" alt="롯데 GRS 목업" />
+        </div>
+        <div class="project-showcase-actions">
           <a href="https://lotte-grs-redesign.netlify.app/" target="_blank" rel="noreferrer">사이트 보러가기</a>
+        </div>
+        <div class="project-showcase-details">
+          <div class="project-showcase-info project-showcase-info--type">
+            <strong>Personal Project</strong>
+            <span>반응형 메인 페이지 리뉴얼</span>
+          </div>
+          <div class="project-showcase-info project-showcase-info--duration">
+            <strong>Project&nbsp;&nbsp;&nbsp;&nbsp;Duration</strong>
+            <span>Corporate Website Renewal</span>
+          </div>
         </div>
       </section>
 
@@ -46,6 +50,9 @@
         </header>
       </section>
     </main>
+
+    <div data-include="partials/footer.html" data-footer-variant="project"></div>
+
     <script src="js/common.js"></script>
     <script src="js/subpage.js"></script>
   </body>

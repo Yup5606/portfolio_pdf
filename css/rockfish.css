@@ -1,23 +1,19 @@
 /*락피쉬 히어로 영역*/
 .rockfish-hero {
-  color: var(--white);
-  background: linear-gradient(115deg, var(--blue) 0 56%, #f2f4f7 56% 100%);
+  --showcase-color: var(--blue);
+  --showcase-hover: #0e225f;
 }
 
-.rockfish-hero .project-hero__copy {
-  max-width: 540px;
+.rockfish-hero .project-showcase-copy {
+  padding-top: 42px;
 }
 
-.rockfish-hero h1 {
-  font-size: clamp(50px, 5.2vw, 96px);
+.rockfish-hero .project-showcase-copy h1 {
+  font-size: clamp(34px, 9.2vw, 46px);
 }
 
-.rockfish-imac {
-  position: relative;
-  z-index: 2;
-  width: min(57vw, 940px);
-  margin-left: auto;
-  filter: drop-shadow(0 30px 42px rgba(0, 0, 0, 0.22));
+.rockfish-hero .project-showcase-mockup {
+  width: min(100%, 430px);
 }
 
 /*락피쉬 스토리 영역*/

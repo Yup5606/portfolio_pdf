@@ -1,5 +1,5 @@
 (function () {
-  const revealItems = document.querySelectorAll(".content-section, .image-story");
+  const revealItems = document.querySelectorAll(".content-section, .image-story, .parley-role-section, .parley-research-section");
 
   if (!revealItems.length || !("IntersectionObserver" in window)) {
     return;
@@ -23,39 +23,220 @@
 })();
 
 (function () {
-  const projectNav = document.querySelector(".project-page .site-nav");
+  const charts = document.querySelectorAll(".parley-pie-chart");
+  const namespace = "http://www.w3.org/2000/svg";
 
-  if (!projectNav) {
+  if (!charts.length) {
     return;
   }
 
-  let lastScrollY = window.scrollY;
-  let ticking = false;
+  const toPoint = (angle, radius) => {
+    const radian = (angle - 90) * (Math.PI / 180);
 
-  const updateProjectNav = () => {
-    const currentScrollY = Math.max(window.scrollY, 0);
-    const distance = currentScrollY - lastScrollY;
-
-    if (currentScrollY < 32) {
-      projectNav.classList.remove("is-nav-hidden");
-    } else if (distance > 8) {
-      projectNav.classList.add("is-nav-hidden");
-    } else if (distance < -8) {
-      projectNav.classList.remove("is-nav-hidden");
-    }
-
-    lastScrollY = currentScrollY;
-    ticking = false;
+    return {
+      x: Math.cos(radian) * radius,
+      y: Math.sin(radian) * radius
+    };
   };
 
-  const requestProjectNavUpdate = () => {
+  const getSectorPath = (startAngle, endAngle) => {
+    const sweep = Math.max(endAngle - startAngle, 0);
+
+    if (sweep <= 0.01) {
+      return "M 0 0";
+    }
+
+    const start = toPoint(startAngle, 100);
+    const end = toPoint(endAngle, 100);
+    const largeArc = sweep > 180 ? 1 : 0;
+
+    return `M 0 0 L ${start.x} ${start.y} A 100 100 0 ${largeArc} 1 ${end.x} ${end.y} Z`;
+  };
+
+  const getLabelLines = (label, display) => {
+    return [label, display];
+  };
+
+  const buildChart = (chart) => {
+    const segmentGroup = chart.querySelector(".parley-pie-segments");
+    const labelGroup = chart.querySelector(".parley-pie-labels");
+    const dataItems = chart.querySelectorAll(".parley-pie-data li");
+    const data = Array.from(dataItems).map((item) => ({
+      label: item.dataset.label,
+      value: Number(item.dataset.value),
+      display: item.dataset.display,
+      color: item.dataset.color,
+      textColor: item.dataset.textColor
+    }));
+    const total = data.reduce((sum, item) => sum + item.value, 0);
+    const maxValue = Math.max(...data.map((item) => item.value));
+    let currentAngle = 0;
+
+    data.forEach((item) => {
+      const path = document.createElementNS(namespace, "path");
+      const text = document.createElementNS(namespace, "text");
+      const angle = (item.value / total) * 360;
+      const midAngle = currentAngle + angle / 2;
+      const hoverPoint = toPoint(midAngle, 8);
+      const labelRadius = item.value < 10 ? 78 : 54;
+      const labelPoint = toPoint(midAngle, labelRadius);
+
+      path.dataset.start = currentAngle;
+      path.dataset.angle = angle;
+      path.setAttribute("fill", item.color);
+      path.setAttribute("d", getSectorPath(currentAngle, currentAngle));
+      path.classList.add("parley-pie-segment");
+      path.style.setProperty("--hover-x", `${hoverPoint.x}px`);
+      path.style.setProperty("--hover-y", `${hoverPoint.y}px`);
+
+      text.setAttribute("x", labelPoint.x);
+      text.setAttribute("y", labelPoint.y);
+      text.setAttribute("fill", item.textColor);
+      text.classList.toggle("is-primary", item.value === maxValue);
+      text.classList.toggle("is-muted", item.value !== maxValue);
+      text.classList.toggle("is-on-color", item.color !== "#ffffff");
+      text.classList.toggle("is-small", item.value < 10);
+
+      getLabelLines(item.label, item.display).forEach((line, index) => {
+        const tspan = document.createElementNS(namespace, "tspan");
+
+        tspan.setAttribute("x", labelPoint.x);
+        tspan.setAttribute("dy", index === 0 ? "-0.55em" : "1.15em");
+        tspan.textContent = line;
+        text.appendChild(tspan);
+      });
+
+      segmentGroup.appendChild(path);
+      labelGroup.appendChild(text);
+      currentAngle += angle;
+    });
+  };
+
+  const drawChart = (chart, progress) => {
+    chart.querySelectorAll(".parley-pie-segments path").forEach((path) => {
+      const startAngle = Number(path.dataset.start);
+      const angle = Number(path.dataset.angle);
+      const filledAngle = Math.min(Math.max(progress * 360 - startAngle, 0), angle);
+
+      path.setAttribute("d", getSectorPath(startAngle, startAngle + filledAngle));
+    });
+  };
+
+  const animateChart = (chart) => {
+    const duration = 1800;
+    const startTime = performance.now();
+
+    const tick = (currentTime) => {
+      const rawProgress = Math.min((currentTime - startTime) / duration, 1);
+      const progress = 1 - Math.pow(1 - rawProgress, 3);
+
+      drawChart(chart, progress);
+
+      if (rawProgress < 1) {
+        window.requestAnimationFrame(tick);
+        return;
+      }
+
+      chart.classList.add("is-complete");
+    };
+
+    window.requestAnimationFrame(tick);
+  };
+
+  charts.forEach((chart) => buildChart(chart));
+
+  const startVisibleCharts = () => {
+    charts.forEach((chart) => {
+      const rect = chart.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight * 0.86 && rect.bottom > window.innerHeight * 0.14;
+
+      if (!isVisible || chart.dataset.pieAnimated === "true") {
+        return;
+      }
+
+      chart.dataset.pieAnimated = "true";
+      animateChart(chart);
+    });
+  };
+
+  let ticking = false;
+
+  const requestChartCheck = () => {
     if (ticking) {
       return;
     }
 
     ticking = true;
-    window.requestAnimationFrame(updateProjectNav);
+    window.requestAnimationFrame(() => {
+      startVisibleCharts();
+      ticking = false;
+    });
   };
 
-  window.addEventListener("scroll", requestProjectNavUpdate, { passive: true });
+  window.addEventListener("scroll", requestChartCheck, { passive: true });
+  window.addEventListener("resize", requestChartCheck);
+  requestChartCheck();
+})();
+
+(function () {
+  const skillItems = document.querySelectorAll(".parley-skill-list li");
+
+  skillItems.forEach((item) => {
+    item.addEventListener("mousemove", (event) => {
+      const rect = item.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      item.style.setProperty("--card-x", `${x}px`);
+      item.style.setProperty("--card-y", `${y}px`);
+    });
+  });
+})();
+
+(function () {
+  const initProjectNav = () => {
+    const projectNav = document.querySelector(".project-page .site-nav");
+
+    if (!projectNav || projectNav.dataset.scrollReady === "true") {
+      return;
+    }
+
+    projectNav.dataset.scrollReady = "true";
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateProjectNav = () => {
+      const currentScrollY = Math.max(window.scrollY, 0);
+      const distance = currentScrollY - lastScrollY;
+
+      if (currentScrollY < 32) {
+        projectNav.classList.remove("is-nav-hidden");
+      } else if (distance > 8) {
+        projectNav.classList.add("is-nav-hidden");
+      } else if (distance < -8) {
+        projectNav.classList.remove("is-nav-hidden");
+      }
+
+      lastScrollY = currentScrollY;
+      ticking = false;
+    };
+
+    const requestProjectNavUpdate = () => {
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+      window.requestAnimationFrame(updateProjectNav);
+    };
+
+    window.addEventListener("scroll", requestProjectNavUpdate, { passive: true });
+  };
+
+  if (window.portfolioIncludesReady) {
+    window.portfolioIncludesReady.then(initProjectNav);
+    return;
+  }
+
+  initProjectNav();
 })();

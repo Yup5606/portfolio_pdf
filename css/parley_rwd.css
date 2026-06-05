@@ -1,42 +1,303 @@
 /*반응형 영역*/
-@media (max-width: 768px) {
-  .parley-hero {
-    background: linear-gradient(160deg, #f7f7f2 0 52%, #d9e7f5 52% 100%);
+@media (min-width: 769px) and (max-width: 1280px) {
+  .parley-hero .project-showcase-mockup {
+    width: min(90%, 550px);
   }
 
-  .parley-mobile {
-    width: min(34vw, 170px);
+  .parley-report-section {
+    min-height: auto;
+    padding: 112px 44px;
   }
 
-  .role-grid {
-    display: grid;
+  .parley-report-section::before {
+    inset: -18px;
+    filter: blur(10px);
+  }
+
+  .parley-report-content {
+    width: min(100%, 900px);
+  }
+
+  .parley-report-content h2 {
+    margin-bottom: 44px;
+  }
+
+  .parley-report-copy {
+    gap: 38px;
+  }
+
+  .parley-report-copy br {
+    display: none;
+  }
+
+  .parley-report-content strong {
+    font-size: inherit;
+  }
+
+  .parley-role-section {
+    padding: 96px 44px 92px;
+  }
+
+  .parley-role-layout {
     grid-template-columns: 1fr;
+    gap: 80px;
   }
+
+  .parley-role-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 44px;
+  }
+
+  .parley-role-card--leader {
+    justify-items: start;
+  }
+
+  .parley-role-card--leader h2 {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .parley-role-card--leader .parley-profile {
+    justify-self: center;
+  }
+
+  .parley-role-card--member {
+    align-self: start;
+    padding-top: 28px;
+  }
+
+  .parley-role-percent {
+    text-align: left;
+  }
+
+  .parley-team-note {
+    grid-column: 1 / -1;
+  }
+
+  .parley-skill-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .parley-skill-panel {
+    justify-self: center;
+    width: min(100%, 640px);
+  }
+
+  .parley-skill-list li {
+    min-height: 108px;
+    padding: 14px 10px;
+    border-radius: 20px;
+  }
+
+  .parley-research-section {
+    padding: 104px 44px 96px;
+  }
+
+  .parley-research-inner h2 {
+    margin-bottom: 56px;
+  }
+
+  .parley-research-chart-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 56px;
+  }
+
+  .parley-research-card {
+    gap: 30px;
+  }
+
+  .parley-pie-chart {
+    width: min(100%, 340px);
+  }
+
+  .parley-pie-labels text {
+    font-size: 10px;
+  }
+
+  .parley-pie-labels text.is-primary {
+    font-size: 15px;
+  }
+
+  .parley-pie-labels text.is-small {
+    font-size: 6.5px;
+  }
+
+  .parley-research-summary {
+    margin-top: 64px;
+  }
+
+  .parley-research-source {
+    margin-top: 60px;
+  }
+
 }
 
-@media (min-width: 769px) and (max-width: 1280px) {
-  .parley-mockups {
-    min-height: auto;
+@media (min-width: 1281px) {
+  .parley-hero .project-showcase-mockup {
+    width: min(74vw, 1180px);
   }
 
-  .parley-desktop {
-    width: min(100%, 820px);
-    margin: 0 auto;
+  .parley-report-section {
+    min-height: 100vh;
+    padding: clamp(88px, 7.5vw, 144px) clamp(20px, 5vw, 96px);
   }
 
-  .parley-mobile {
-    right: 6%;
-    width: min(26vw, 210px);
+  .parley-report-section::before {
+    inset: -18px;
+    filter: blur(10px);
   }
 
-  .role-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+  .parley-report-content h2 {
+    margin-bottom: clamp(36px, 3.5vw, 56px);
+  }
+
+  .parley-report-copy {
+    gap: clamp(30px, 3.2vw, 48px);
+  }
+
+  .parley-report-copy p {
+    line-height: 1.6;
+  }
+
+  .parley-report-copy br {
+    display: inline;
+  }
+
+  .parley-role-section {
+    min-height: 100vh;
+    padding: clamp(116px, 8vw, 154px) clamp(52px, 6vw, 118px) clamp(92px, 6vw, 124px);
+  }
+
+  .parley-role-layout {
+    grid-template-columns: minmax(0, 1.48fr) minmax(340px, 0.68fr);
+    align-items: center;
+    gap: clamp(80px, 6vw, 110px);
+  }
+
+  .parley-role-group {
+    position: relative;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(36px, 3.2vw, 56px);
+  }
+
+  .parley-role-card {
+    gap: 28px;
+  }
+
+  .parley-role-card--leader {
+    justify-items: start;
+  }
+
+  .parley-role-card--leader h2 {
+    justify-self: center;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .parley-role-card--leader .parley-profile {
+    justify-self: center;
+    margin-bottom: 18px;
+  }
+
+  .parley-role-card--member {
+    align-self: start;
+    padding-top: clamp(24px, 2vw, 32px);
+  }
+
+  .parley-profile {
+    width: 160px;
+    height: 160px;
+  }
+
+  .parley-role-percent {
+    text-align: left;
+  }
+
+  .parley-task-list li,
+  .parley-member-list li {
+    padding-left: 24px;
+  }
+
+  .parley-team-note {
+    position: absolute;
+    right: 0;
+    bottom: -78px;
+    left: 0;
+  }
+
+  .parley-skill-panel {
+    gap: 32px;
+    justify-self: end;
+    width: min(110%, 430px);
+  }
+
+  .parley-skill-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .parley-skill-list li {
+    min-height: 116px;
+    padding: 16px 0;
+    border-radius: 22px;
+  }
+
+  .parley-skill-list img {
+    width: calc(var(--project-skill-icon-size) * 0.62);
+    height: calc(var(--project-skill-icon-size) * 0.62);
+  }
+
+  .parley-research-section {
+    min-height: 100vh;
+    padding: clamp(116px, 8vw, 154px) clamp(52px, 6vw, 118px) clamp(92px, 6vw, 124px);
+  }
+
+  .parley-research-inner h2 {
+    margin-bottom: clamp(56px, 5vw, 82px);
+  }
+
+  .parley-research-chart-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(72px, 8vw, 142px);
+  }
+
+  .parley-research-card {
+    gap: 34px;
+  }
+
+  .parley-pie-chart {
+    width: clamp(380px, 28vw, 500px);
+  }
+
+  .parley-pie-labels text {
+    font-size: 11px;
+  }
+
+  .parley-pie-labels text.is-primary {
+    font-size: 16px;
+  }
+
+  .parley-pie-labels text.is-small {
+    font-size: 6px;
+  }
+
+  .parley-research-summary {
+    margin-top: clamp(70px, 6vw, 104px);
+  }
+
+  .parley-research-source {
+    margin-top: clamp(72px, 6vw, 108px);
   }
 }
 
 @media (min-width: 1281px) and (max-width: 1440px) {
-  .parley-desktop {
-    width: min(52vw, 820px);
+  .parley-hero .project-showcase-mockup {
+    width: min(80%, 700px);
+    margin-bottom: 150px;
   }
 }

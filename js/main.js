@@ -14,7 +14,7 @@
   activeIndex = activeIndex < 0 ? 0 : activeIndex;
 
   const loaderStartedAt = window.performance.now();
-  const loaderDuration = 2500;
+  const loaderDuration = 2200;
   const transitionDuration = 1180;
   const wheelThreshold = 80;
   let pageLoaded = document.readyState === "complete";
@@ -55,22 +55,45 @@
     const direction = nextIndex > activeIndex ? 1 : -1;
     const currentPanel = panels[activeIndex];
     const nextPanel = panels[safeIndex];
-    const originClass = direction > 0 ? "from-right" : "from-left";
 
     isChanging = true;
-    currentPanel.style.zIndex = "2";
-    nextPanel.style.zIndex = "3";
-    nextPanel.classList.remove("from-left", "from-right", "is-active");
-    nextPanel.classList.add(originClass);
+
+    if (direction > 0) {
+      currentPanel.style.zIndex = "2";
+      nextPanel.style.zIndex = "3";
+      nextPanel.classList.remove("from-left", "from-right", "is-under", "is-exiting", "is-active");
+      nextPanel.classList.add("from-right");
+
+      window.requestAnimationFrame(() => {
+        nextPanel.classList.add("is-active");
+      });
+
+      window.setTimeout(() => {
+        currentPanel.classList.remove("is-active", "is-under", "is-exiting");
+        currentPanel.style.zIndex = "1";
+        nextPanel.classList.remove("from-right");
+        nextPanel.style.zIndex = "2";
+        activeIndex = safeIndex;
+        isChanging = false;
+      }, transitionDuration);
+
+      return true;
+    }
+
+    nextPanel.style.zIndex = "2";
+    currentPanel.style.zIndex = "3";
+    nextPanel.classList.remove("from-left", "from-right", "is-exiting");
+    nextPanel.classList.add("is-under");
 
     window.requestAnimationFrame(() => {
-      nextPanel.classList.add("is-active");
+      currentPanel.classList.add("is-exiting");
     });
 
     window.setTimeout(() => {
-      currentPanel.classList.remove("is-active");
-      currentPanel.style.zIndex = "1";
-      nextPanel.classList.remove("from-left", "from-right");
+      currentPanel.classList.remove("is-active", "is-under", "is-exiting");
+      currentPanel.style.zIndex = "0";
+      nextPanel.classList.remove("is-under");
+      nextPanel.classList.add("is-active");
       nextPanel.style.zIndex = "2";
       activeIndex = safeIndex;
       isChanging = false;

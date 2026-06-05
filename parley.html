@@ -11,73 +11,158 @@
     <link rel="stylesheet" href="css/parley_rwd.css" />
   </head>
   <body class="project-page parley-project">
-    <!--헤더 영역-->
-    <header class="site-nav" aria-label="Portfolio navigation">
-      <a class="site-nav__logo" href="index.html" aria-label="Go home">
-        <img src="image/common/youbin.svg" alt="You Bin logo" />
-      </a>
-      <nav>
-        <a href="project-index.html">Index</a>
-        <a href="about.html">About</a>
-      </nav>
-    </header>
+
+    <div data-include="partials/header.html" data-header-variant="project"></div>
 
     <!--메인 영역-->
     <main>
       <!--히어로 영역-->
-      <section class="project-hero parley-hero">
-        <div class="hero-circle"></div>
-        <div class="project-hero__copy">
-          <p class="wild-logo">Parley</p>
+      <section class="project-showcase-hero parley-hero">
+        <div class="project-showcase-circle"></div>
+        <div class="project-showcase-copy">
+          <img class="project-showcase-logo" src="image/parley/parley_logo.svg" alt="Parley" />
           <h1>Parley for the Ocean</h1>
-          <p>바다에서 혁신으로, Parley for the Ocean</p>
+          <p>바다에서 혁신으로 , Parley for the Ocean</p>
           <p>웹페이지 리뉴얼 팀 프로젝트</p>
         </div>
-        <div class="parley-mockups">
-          <img class="parley-desktop" src="image/parley/extracted/00-image0_19_295.png" alt="Parley 데스크톱 목업" />
-          <img class="parley-mobile" src="image/parley/extracted/01-image1_19_295.png" alt="Parley 모바일 목업" />
+        <div class="project-showcase-mockup">
+          <img src="image/parley/parley_mockup.png" alt="Parley for the Ocean 반응형 목업" />
         </div>
-        <div class="project-actions">
+        <div class="project-showcase-actions">
           <a href="https://parleyfortheocean-redesign.netlify.app/" target="_blank" rel="noreferrer">사이트 보러가기</a>
           <a href="pdf/parley-portfolio.pdf" target="_blank" rel="noreferrer">PDF 보러가기</a>
+        </div>
+        <div class="project-showcase-details">
+          <div class="project-showcase-info project-showcase-info--type">
+            <strong>Team Project</strong>
+            <span>팀장: 박유빈&nbsp;&nbsp;팀원: 박보경</span>
+          </div>
+          <div class="project-showcase-info project-showcase-info--duration">
+            <strong>Project&nbsp;&nbsp;&nbsp;&nbsp;Duration</strong>
+            <span>2026.03 - 2026.04</span>
+          </div>
         </div>
       </section>
 
       <!--개요 영역-->
-      <section class="image-story image-story--dark">
-        <img src="image/parley/extracted/02-image2_19_295.jpg" alt="" />
-        <div>
-          <p class="eyebrow">Overview</p>
-          <h2>이해는 빠르게 · 탐색은 쉽게 · 몰입은 깊게</h2>
-          <p>해양 보호 메시지를 사용자가 빠르게 이해하고 참여 흐름으로 이어질 수 있도록 콘텐츠 구조를 정리했습니다.</p>
+      <section class="parley-report-section" aria-labelledby="parley-report-title">
+        <div class="parley-report-content">
+          <h2 id="parley-report-title">“ 이해는 빠르게 · 탐색은 쉽게 · 몰입은 깊게 ”</h2>
+          <div class="parley-report-copy">
+            <p>
+              기존 Parley 웹사이트는<br />
+              브랜드가 가진 강한 ESG 가치와 해양 보호 활동에 비해 <strong>정보 구조가 복잡</strong>하고<br />
+              <strong>사용자 참여를 유도하는 흐름이 부족</strong>하였습니다.<br />
+              이에 해양 환경 보호 메시지를 보다 <strong>쉽고 직관적으로 전달</strong>하고<br />
+              사용자가 단순히 정보를 소비하는 것을 넘어<br />
+              실제 행동과 참여로 이어질 수 있도록 <strong>디지털 경험을 재설계</strong>하고자 하였습니다.
+            </p>
+            <p>
+              본 프로젝트는 가치 소비와 친환경 라이프스타일에 대한 관심이 높은 MZ세대를 핵심 페르소나로 설정하였습니다.<br />
+              브랜드의 <strong>철학</strong>과 사회적 메시지에 공감하고, 이를 소비와 행동으로 연결하는 사용자 특성을 반영하여<br />
+              단순 정보 제공 중심의 구조에서 벗어나 <strong>참여와 공감을 유도하는 사용자 경험 설계에 집중</strong>하였습니다.
+            </p>
+            <p>
+              이를 통해 ESG 가치를 <strong>‘보는 경험’에서 ‘참여하는 경험’으로 확장</strong>하고,<br />
+              브랜드 가치와 사용자 행동을 연결하는<br />
+              <strong>참여형 웹사이트 구축을 목표</strong>로 프로젝트를 진행하였습니다.
+            </p>
+          </div>
         </div>
       </section>
 
       <!--역할 및 툴 영역-->
-      <section class="content-section">
-        <header class="section-heading">
-          <p>Role & Skill</p>
-          <h2>팀 작업 안에서 디자인과 퍼블리싱 흐름을 연결</h2>
-        </header>
-        <div class="role-grid">
-          <article>
-            <img src="image/parley/extracted/03-image3_19_295.png" alt="" />
-            <h3>Leader 박유빈</h3>
-            <p>UI/UX 디자인 70% · 웹퍼블리싱 60%</p>
-          </article>
-          <article>
-            <img src="image/parley/extracted/04-image4_19_295.png" alt="" />
-            <h3>박보경</h3>
-            <p>메인 일부 섹션 구현 · 회의록 및 결과 정리</p>
-          </article>
-          <aside class="tool-list">
-            <span><img src="image/parley/icon/figma_icon.svg" alt="" />Figma</span>
-            <span><img src="image/parley/icon/photoshop_icon.svg" alt="" />Photoshop</span>
-            <span><img src="image/parley/icon/vscode_icon.svg" alt="" />VS Code</span>
-            <span><img src="image/parley/icon/github_icon.svg" alt="" />GitHub</span>
-            <span><img src="image/parley/icon/netlipy_icon.svg" alt="" />Netlify</span>
-            <span><img src="image/parley/icon/notion_icon.svg" alt="" />Notion</span>
+      <section class="parley-role-section" aria-labelledby="parley-role-title">
+        <div class="parley-role-layout">
+          <div class="parley-role-group">
+            <article class="parley-role-card parley-role-card--leader">
+              <h2 id="parley-role-title">Leader 박유빈</h2>
+              <img class="parley-profile" src="image/parley/extracted/03-image3_19_295.png" alt="박유빈 프로필 이미지" />
+              <p class="parley-role-percent">My Role(기여도) : UI/UX 디자인 70% | 웹퍼블리싱 60%</p>
+              <ul class="parley-task-list" aria-label="박유빈 담당 업무">
+                <li>UI/UX 디자인: 메인 비주얼 콘셉트 수립 및 메인·서브 핵심 페이지 UI 디자인 (디자인 시스템 구축 100%)</li>
+                <li>히어로 영역 비주얼 영상 제작</li>
+                <li>프론트엔드 퍼블리싱: 메인 페이지 비주얼 인터랙션 구현 및 주요 섹션 마크업, 서브 페이지 핵심 콘텐츠 반응형 구현</li>
+                <li>형상 관리 & 디버깅: GitHub 기반 소스 병합 및 Safari 브라우저 렌더링 오류 개선</li>
+                <li>PM 역량: 프로젝트 이슈 대응, 결과 보고서 및 발표 자료 제작 총괄</li>
+              </ul>
+            </article>
+
+            <article class="parley-role-card parley-role-card--member">
+              <h2>박보경</h2>
+              <img class="parley-profile" src="image/parley/extracted/04-image4_19_295.png" alt="박보경 프로필 이미지" />
+              <ul class="parley-member-list" aria-label="박보경 담당 업무">
+                <li>메인 페이지 4-5섹션 및 헤더·푸터 구현</li>
+                <li>서브 페이지 1-2 디자인 및 퍼블리싱</li>
+                <li>오류 수정 및 기능 개선 작업</li>
+                <li>결과보고서 제작 및 최종 정리</li>
+                <li>노션 회의록 작성 및 프로젝트 진행 사항 정리</li>
+              </ul>
+            </article>
+
+            <p class="parley-team-note">[팀 구성: 박유빈(리더/기획·UI·퍼블리싱), 박보경(UI·퍼블리싱)]</p>
+          </div>
+
+          <aside class="parley-skill-panel" aria-labelledby="parley-skill-title">
+            <h2 id="parley-skill-title">Skill</h2>
+            <ul class="parley-skill-list">
+              <li><img src="image/common/icon/figma_icon.svg" alt="" /><span>Figma</span></li>
+              <li><img src="image/common/icon/premier_icon.svg" alt="" /><span>Premiere Pro</span></li>
+              <li><img src="image/common/icon/chatgpt_icon.svg" alt="" /><span>Chat GPT</span></li>
+              <li><img src="image/common/icon/vscode_icon.svg" alt="" /><span>VS Code</span></li>
+              <li><img src="image/common/icon/aos_icon.svg" alt="" /><span>AOS Plugin</span></li>
+              <li><img src="image/common/icon/jquery_icon.svg" alt="" /><span>jQuery</span></li>
+              <li><img src="image/common/icon/github_icon.svg" alt="" /><span>Git Hub</span></li>
+              <li><img src="image/common/icon/netlipy_icon.svg" alt="" /><span>Netlify</span></li>
+              <li><img src="image/common/icon/notion_icon.svg" alt="" /><span>Notion</span></li>
+            </ul>
           </aside>
+        </div>
+      </section>
+
+      <!--리서치 영역-->
+      <section class="parley-research-section" aria-labelledby="parley-research-title">
+        <div class="parley-research-inner">
+          <h2 id="parley-research-title">MZ의 가치 소비 성향</h2>
+          <div class="parley-research-chart-grid">
+            <article class="parley-research-card">
+              <h3>Q. 나는 가치소비자다.</h3>
+              <div class="parley-pie-chart" role="img" aria-label="그렇다 79%, 아니다 21%">
+                <svg viewBox="-100 -100 200 200" aria-hidden="true">
+                  <g class="parley-pie-segments"></g>
+                  <g class="parley-pie-labels"></g>
+                </svg>
+                <ul class="parley-pie-data" hidden>
+                  <li data-label="그렇다" data-value="79" data-display="79%" data-color="#8ad2d5" data-text-color="#ffffff"></li>
+                  <li data-label="아니다" data-value="21" data-display="21%" data-color="#ffffff" data-text-color="#06124a"></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="parley-research-card">
+              <h3>Q. ESG 활동 중 관심 분야는?</h3>
+              <div class="parley-pie-chart" role="img" aria-label="E 환경 64.7%, S 사회 29.3%, G 지배구조 6%">
+                <svg viewBox="-100 -100 200 200" aria-hidden="true">
+                  <g class="parley-pie-segments"></g>
+                  <g class="parley-pie-labels"></g>
+                </svg>
+                <ul class="parley-pie-data" hidden>
+                  <li data-label="E (환경)" data-value="64.7" data-display="64.7%" data-color="#8ad2d5" data-text-color="#ffffff"></li>
+                  <li data-label="S (사회)" data-value="29.3" data-display="29.3%" data-color="#b7caca" data-text-color="#ffffff"></li>
+                  <li data-label="G(지배구조)" data-value="6" data-display="6.0%" data-color="#ffffff" data-text-color="#06124a"></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="parley-research-summary">
+            <strong>“MZ세대의 78.2%가 환경보호 활동에 직접 참여”</strong>
+            <p>플로깅 · 제로웨이스트 · 재활용 등 행동 기반 친환경 활동 증가</p>
+          </div>
+          <p class="parley-research-source">
+            대한상공회의소는 3월 1일부터 15일까지 MZ세대 380명을 대상으로 “ESG 경영과 기업의 역할”에 대한 설문조사를 실시한 결과,
+            응답자의 64.5%가 ESG 기업 제품이라면 가격이 더 높더라도 구매할 의향이 있다고 답했습니다.
+            <span>동아일보 | Asia Business Daily 발췌</span>
+          </p>
         </div>
       </section>
 
@@ -108,6 +193,8 @@
         </div>
       </section>
     </main>
+
+    <div data-include="partials/footer.html" data-footer-variant="project"></div>
 
     <script src="js/common.js"></script>
     <script src="js/subpage.js"></script>

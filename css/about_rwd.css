@@ -193,8 +193,21 @@
   }
 
   .about-footer {
-    display: grid;
-    gap: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 9px;
+  }
+
+  .about-footer p {
+    min-width: 0;
+  }
+
+  .about-footer div {
+    display: flex;
+    flex-shrink: 0;
+    gap: 8px;
   }
 }
 

@@ -11,16 +11,8 @@
     <link rel="stylesheet" href="css/about_rwd.css" />
   </head>
   <body class="about-page">
-    <!--헤더 영역-->
-    <header class="main-nav about-nav" aria-label="Portfolio navigation">
-      <a class="main-nav-logo" href="index.html" aria-label="Go home">
-        <img src="image/common/youbin.svg" alt="You Bin logo" />
-      </a>
-      <nav>
-        <a href="project-index.html">Index</a>
-        <a href="about.html">About</a>
-      </nav>
-    </header>
+
+    <div data-include="partials/header.html" data-header-variant="about"></div>
 
     <!--우측 메뉴 영역-->
     <aside class="about-side-nav" aria-label="About page navigation">
@@ -79,8 +71,8 @@
         <ul class="contact-strip" aria-label="Contact summary">
           <li><span>Mail</span><a href="mailto:parkyoubin127@gmail.com">parkyoubin127@gmail.com</a></li>
           <li><span>Phone</span><a href="">010.5737.5606</a></li>
-          <li><span>Instagram</span><a href="https://www.instagram.com/madeby_yup?utm_source=qr" target="_blank" rel="noreferrer">@madeby_yup</a></li>
-          <li><span>GitHub</span><a href="https://github.com/yup5606" target="_blank" rel="noreferrer">github.com/yup5606</a></li>
+          <li><span>Instagram</span><a href="https://www.instagram.com/madeby_yup/" target="_blank" rel="noreferrer">@madeby_yup</a></li>
+          <li><span>GitHub</span><a href="https://github.com/Yup5606" target="_blank" rel="noreferrer">github.com/Yup5606</a></li>
         </ul>
       </section>
 
@@ -231,10 +223,10 @@
               <h3>Design</h3>
             </div>
             <div class="tool-list">
-              <span class="tool-item" data-percent="88%"><img src="image/parley/icon/figma_icon.svg" alt="" />Figma</span>
-              <span class="tool-item" data-percent="90%"><img src="image/parley/icon/photoshop_icon.svg" alt="" />Photoshop</span>
-              <span class="tool-item" data-percent="84%"><img src="image/parley/icon/illrst_icon.svg" alt="" />Illustrator</span>
-              <span class="tool-item" data-percent="72%"><img src="image/parley/icon/premier_icon.svg" alt="" />Premiere Pro</span>
+              <span class="tool-item" data-percent="88%"><img src="image/common/icon/figma_icon.svg" alt="" />Figma</span>
+              <span class="tool-item" data-percent="90%"><img src="image/common/icon/photoshop_icon.svg" alt="" />Photoshop</span>
+              <span class="tool-item" data-percent="84%"><img src="image/common/icon/illrst_icon.svg" alt="" />Illustrator</span>
+              <span class="tool-item" data-percent="72%"><img src="image/common/icon/premier_icon.svg" alt="" />Premiere Pro</span>
               <span class="tool-item" data-percent="62%"><b>AE</b>After Effects</span>
             </div>
           </article>
@@ -247,9 +239,9 @@
               <span class="tool-item" data-percent="88%"><b>HTML</b>HTML5</span>
               <span class="tool-item" data-percent="86%"><b>CSS</b>CSS3</span>
               <span class="tool-item" data-percent="74%"><b>JS</b>JavaScript</span>
-              <span class="tool-item" data-percent="82%"><img src="image/parley/icon/vscode_icon.svg" alt="" />VS Code</span>
-              <span class="tool-item" data-percent="70%"><img src="image/parley/icon/jquery_icon.svg" alt="" />jQuery</span>
-              <span class="tool-item" data-percent="72%"><img src="image/parley/icon/aos_icon.svg" alt="" />AOS</span>
+              <span class="tool-item" data-percent="82%"><img src="image/common/icon/vscode_icon.svg" alt="" />VS Code</span>
+              <span class="tool-item" data-percent="70%"><img src="image/common/icon/jquery_icon.svg" alt="" />jQuery</span>
+              <span class="tool-item" data-percent="72%"><img src="image/common/icon/aos_icon.svg" alt="" />AOS</span>
               <span class="tool-item" data-percent="68%"><b>SW</b>Swiper</span>
               <span class="tool-item" data-percent="66%"><b>SCSS</b>Sass</span>
             </div>
@@ -260,9 +252,9 @@
               <h3>Collaboration</h3>
             </div>
             <div class="tool-list">
-              <span class="tool-item" data-percent="78%"><img src="image/parley/icon/github_icon.svg" alt="" />GitHub</span>
-              <span class="tool-item" data-percent="84%"><img src="image/parley/icon/notion_icon.svg" alt="" />Notion</span>
-              <span class="tool-item" data-percent="72%"><img src="image/parley/icon/netlipy_icon.svg" alt="" />Netlify</span>
+              <span class="tool-item" data-percent="78%"><img src="image/common/icon/github_icon.svg" alt="" />GitHub</span>
+              <span class="tool-item" data-percent="84%"><img src="image/common/icon/notion_icon.svg" alt="" />Notion</span>
+              <span class="tool-item" data-percent="72%"><img src="image/common/icon/netlipy_icon.svg" alt="" />Netlify</span>
               <span class="tool-item" data-percent="70%"><b>DH</b>DotHome</span>
               <span class="tool-item" data-percent="74%"><b>FZ</b>FileZilla</span>
             </div>
@@ -274,7 +266,7 @@
             </div>
             <div class="tool-list">
               <span class="tool-item" data-percent="82%"><b>CDX</b>Codex</span>
-              <span class="tool-item" data-percent="86%"><img src="image/parley/icon/chatgpt_icon.svg" alt="" />ChatGPT</span>
+              <span class="tool-item" data-percent="86%"><img src="image/common/icon/chatgpt_icon.svg" alt="" />ChatGPT</span>
               <span class="tool-item" data-percent="72%"><b>G</b>Gemini</span>
               <span class="tool-item" data-percent="62%"><b>KL</b>Kling</span>
             </div>
@@ -293,21 +285,14 @@
           <ul class="contact-links">
             <li><span>Mail</span><a href="mailto:yup5606@naver.com">yup5606@naver.com</a></li>
             <li><span>Phone</span><a href="tel:01012345678">010.1234.5678</a></li>
-            <li><span>Instagram</span><a href="https://www.instagram.com/madeby_yup?utm_source=qr" target="_blank" rel="noreferrer">@yup5606</a></li>
-            <li><span>GitHub</span><a href="https://github.com/yup5606" target="_blank" rel="noreferrer">github.com/yup5606</a></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/madeby_yup/" target="_blank" rel="noreferrer">@madeby_yup</a></li>
+            <li><span>GitHub</span><a href="https://github.com/Yup5606" target="_blank" rel="noreferrer">github.com/Yup5606</a></li>
           </ul>
         </article>
       </section>
     </main>
 
-    <!--푸터 영역-->
-    <footer class="about-footer">
-      <p>© 2026 PARK YUBIN. All Rights Reserved.</p>
-      <div>
-        <a href="https://github.com/yup5606" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.instagram.com/madeby_yup?utm_source=qr" target="_blank" rel="noreferrer">Instagram</a>
-      </div>
-    </footer>
+    <div data-include="partials/footer.html" data-footer-variant="about"></div>
 
     <script src="js/common.js"></script>
     <script src="js/subpage.js"></script>

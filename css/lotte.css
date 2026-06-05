@@ -1,13 +1,13 @@
 /*롯데 히어로 영역*/
-.lotte-hero-static {
-  color: var(--white);
-  background: linear-gradient(115deg, #cf2229 0 55%, #f6ded3 55% 100%);
+.lotte-hero {
+  --showcase-color: #cf2229;
+  --showcase-hover: #a91922;
 }
 
-.lotte-mockup-static {
-  position: relative;
-  z-index: 2;
-  width: min(54vw, 880px);
-  margin-left: auto;
-  filter: drop-shadow(0 28px 44px rgba(80, 0, 0, 0.25));
+.lotte-hero .project-showcase-logo {
+  width: clamp(110px, 30vw, 140px);
+}
+
+.lotte-hero .project-showcase-mockup {
+  width: min(100%, 360px);
 }
