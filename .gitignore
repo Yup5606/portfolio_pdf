@@ -1,8 +1,0 @@
-node_modules/
-dist/
-.tools/
-.npm-cache/
-*.log
-*.err
-*.zip
-_review_shots/

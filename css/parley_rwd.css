@@ -245,7 +245,7 @@
   }
 
   .parley-color-system-copy {
-    justify-self: center;
+    justify-self: flex-start;
     gap: 18px;
     width: min(100%, 520px);
     max-width: 520px;
@@ -1245,6 +1245,7 @@
   .parley-outcome-inner {
     gap: clamp(26px, 2.2vw, 40px);
     width: 100%;
+    top: 50px;
   }
 
   .parley-outcome-card {

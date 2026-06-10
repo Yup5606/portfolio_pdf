@@ -122,7 +122,8 @@ select {
 
 .site-nav__logo img,
 .main-nav-logo img {
-  width: 100%;
+  padding: 6px;
+  width: 70%;
 }
 
 .site-nav nav,

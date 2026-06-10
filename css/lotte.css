@@ -79,12 +79,10 @@
 }
 
 .lotte-overview-copy > p:last-child {
-  margin: 0;
   color: #050505;
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.65;
-  letter-spacing: 0;
 }
 
 .lotte-overview-copy br {
@@ -113,24 +111,18 @@
 }
 
 .lotte-overview-icon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 54px;
   height: 54px;
   margin-bottom: 20px;
-  color: #050505;
+  color: var(--lotte-red);
 }
 
-.lotte-overview-icon svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.lotte-overview-icon.material-symbols-outlined {
+  font-size: 42px;
+  line-height: 54px;
 }
 
 .lotte-overview-list strong {
@@ -278,6 +270,8 @@
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100%;
+  min-width: 300px;
+  max-width: 400px;
   border: 1px solid rgba(5, 5, 5, 0.08);
   border-radius: 16px;
   overflow: hidden;
@@ -285,31 +279,6 @@
   background: var(--white);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
   transition: transform 0.45s ease, box-shadow 0.45s ease;
-}
-
-.lotte-persona-badge {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  color: var(--white);
-  background: var(--lotte-red);
-}
-
-.lotte-persona-badge svg {
-  width: 58%;
-  height: 58%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .lotte-persona-card:hover {
@@ -344,7 +313,7 @@
   margin: 0;
   color: var(--lotte-red);
   font-size: var(--project-title-font-size);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -401,23 +370,12 @@
 
 .lotte-persona-meta-icon {
   display: inline-flex;
-  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  color: var(--lotte-red);
+  margin-right: 6px;
+  font-size: 1.2em;
   line-height: 1;
-}
-
-.lotte-persona-meta-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  vertical-align: -0.16em;
 }
 
 .lotte-persona-needs {
@@ -477,14 +435,13 @@
 }
 
 .lotte-persona-needs li::before {
-  content: "";
   position: absolute;
-  top: 0.62em;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #222222;
+  content: "\e5df";
+  top: 0.1em;
+  left: -0.2em;
+  font-family: 'Material Symbols Outlined';
+  font-size: 1.2em;
+  line-height: 1;
 }
 
 .lotte-persona-section.reveal .lotte-persona-kicker,
@@ -621,11 +578,10 @@
 .lotte-color-list p,
 .lotte-typo-copy span,
 .lotte-component-system > p {
-  margin: 0;
+  margin-top: 20px;
   color: rgba(255, 255, 255, 0.86);
   font-size: var(--project-body-font-size);
-  font-weight: 500;
-  line-height: 1.65;
+  font-weight: 300;
 }
 
 .lotte-typo-layout {
@@ -710,7 +666,7 @@
 .lotte-component-tabs h3 {
   margin: 0;
   color: var(--white);
-  font-size: calc(var(--project-title-font-size) * 1.22);
+  font-size: calc(var(--project-title-font-size) * 0.8);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -744,25 +700,26 @@
   padding: 0 24px;
   border-radius: 4px;
   color: var(--white);
-  font-size: calc(var(--project-body-font-size) * 1.05);
-  font-weight: 700;
+  font-size: calc(var(--project-body-font-size) * 1);
+  font-weight: 600;
   line-height: 1;
   background: var(--lotte-red);
 }
 
 .lotte-component-buttons figure span.is-active {
-  background: var(--lotte-red);
+  background: var(--lotte-hover);
 }
 
 .lotte-component-buttons figure span::after {
-  content: "→";
+  content: "\f1df";
+  font-family: "Material Symbols Outlined";
   display: inline-block;
-  margin-left: 6px;
+  margin-left: 10px;
   transform-origin: left center;
 }
 
 .lotte-component-buttons figure span.is-active::after {
-  transform: scaleX(1.45);
+  transform: translateX(8px);
 }
 
 .lotte-component-tabs ul {
@@ -842,4 +799,181 @@
 
 .lotte-design-section.reveal .lotte-design-block:nth-of-type(3) {
   transition-delay: 0.16s;
+}
+
+/* 롯데 와이어프레임 영역 */
+.lotte-wireframe-section {
+  padding: 76px 18px 92px;
+  color: #050505;
+  background: var(--lotte-bg);
+}
+
+.lotte-wireframe-inner {
+  display: grid;
+  gap: 36px;
+}
+
+.lotte-wireframe-inner h2 {
+  margin: 0;
+  color: #050505;
+  font-size: var(--project-title-font-size);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.lotte-wireframe-layout {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+}
+
+.lotte-wireframe-shot {
+  margin: 0;
+  overflow: hidden;
+  background: #f1f1f1;
+}
+
+.lotte-wireframe-shot img {
+  width: 100%;
+  height: auto;
+}
+
+/* 롯데 사이트맵 개선 영역 */
+.lotte-sitemap-section {
+  padding: 76px 18px 92px;
+  color: var(--white);
+  background: #050505;
+}
+
+.lotte-sitemap-inner {
+  display: grid;
+  gap: 34px;
+}
+
+.lotte-section-kicker--dark {
+  color: var(--white);
+}
+
+.lotte-section-kicker--dark span {
+  color: var(--white);
+}
+
+.lotte-sitemap-inner h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: calc(var(--project-title-font-size) * 1);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.lotte-sitemap-figure {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 44px;
+}
+
+.lotte-sitemap-figure img {
+  width: 100%;
+  height: auto;
+}
+
+.lotte-sitemap-figure--wide img {
+  width: min(100%, 920px);
+}
+/* 롯데 퍼블리싱 개발 영역 */
+.lotte-publishing-section {
+  display: grid;
+  gap: 44px;
+  padding: 76px 18px 92px;
+  color: #050505;
+  background: var(--lotte-bg);
+}
+
+.lotte-publishing-copy {
+  display: grid;
+  gap: 24px;
+}
+
+.lotte-publishing-copy h2 {
+  margin: 0;
+  color: #050505;
+  font-size: var(--project-title-font-size);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.lotte-publishing-copy > p:last-child {
+  margin: 0;
+  color: #050505;
+  font-size: var(--project-body-font-size);
+  font-weight: 500;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.lotte-device-layout {
+  display: grid;
+  align-items: end;
+  gap: 28px;
+}
+
+.lotte-device {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.lotte-device-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #050505;
+  line-height: 1;
+}
+
+.lotte-device-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #050505;
+}
+
+.lotte-device-icon {
+  color: var(--lotte-red);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.lotte-device-title strong {
+  color: #050505;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.lotte-device-size {
+  padding-left: 32px;
+  color: #555;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.lotte-device img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.lotte-device--desktop img {
+  max-width: 520px;
+}
+
+.lotte-device--tablet img {
+  max-width: 220px;
+}
+
+.lotte-device--mobile img {
+  max-width: 140px;
 }
