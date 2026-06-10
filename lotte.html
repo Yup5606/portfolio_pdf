@@ -20,9 +20,10 @@
       <section class="project-showcase-hero lotte-hero">
         <div class="project-showcase-circle"></div>
         <div class="project-showcase-copy">
-          <img class="project-showcase-logo" src="image/lotte/lotte_GRS_logo_white.svg" alt="Lotte GRS" />
+          <img class="project-showcase-logo" src="image/lotte/lotte_logo.svg" alt="Lotte GRS" />
           <h1>Lotte GRS</h1>
           <p>브랜드 경험을 선명하게 정리한 반응형 메인 페이지</p>
+          <p>웹페이지 리뉴얼 개인 프로젝트</p>
         </div>
         <div class="project-showcase-mockup">
           <img src="image/lotte/mockup_lotte.svg" alt="롯데 GRS 목업" />
@@ -42,12 +43,364 @@
         </div>
       </section>
 
-      <!--개요 영역-->
-      <section class="content-section">
-        <header class="section-heading">
-          <p>Overview</p>
-          <h2>흩어진 브랜드 정보를 한 화면에서 빠르게 이해하도록</h2>
-        </header>
+      <!--오버뷰 영역-->
+      <section class="lotte-overview-section" aria-labelledby="lotte-overview-title">
+        <div class="lotte-overview-copy">
+          <p class="lotte-section-kicker"><strong>01.</strong><span>Over view</span></p>
+          <h2 id="lotte-overview-title">대한민국 대표 외식 프랜차이즈,<br /><span>롯데 GRS</span>를 새롭게 설계 하다.</h2>
+          <p>
+            롯데 GRS는 롯데리아, 엔제리너스, 크리스피크림 도넛 등 다양한 F&amp;B 브랜드를<br />
+            운영하는 대한민국 대표 외식 프랜차이즈 기업 입니다.<br />
+            기업의 비전과 브랜드 가치를 효과적으로 전달하고, 사용자 중심의 디지털 환경을<br />
+            구축하여 브랜드 영향력을 강화 하고자 웹사이트를 리디자인 하였습니다.
+          </p>
+        </div>
+
+        <ul class="lotte-overview-list" aria-label="롯데 GRS 주요 지표">
+          <li>
+            <span class="lotte-overview-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" focusable="false">
+                <path d="M32 58S13 39.5 13 25.5C13 14.8 21.5 7 32 7s19 7.8 19 18.5C51 39.5 32 58 32 58Z" />
+                <circle cx="32" cy="25.5" r="7.5" />
+              </svg>
+            </span>
+            <strong>1,300+</strong>
+            <span>매장 수</span>
+          </li>
+          <li>
+            <span class="lotte-overview-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" focusable="false">
+                <circle cx="32" cy="32" r="25" />
+                <path d="M12 31h40" />
+                <path d="M32 7c7 7.4 10 15.5 10 25s-3 17.6-10 25" />
+                <path d="M32 7c-7 7.4-10 15.5-10 25s3 17.6 10 25" />
+              </svg>
+            </span>
+            <strong>7</strong>
+            <span>해외 진출 국가</span>
+          </li>
+          <li>
+            <span class="lotte-overview-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" focusable="false">
+                <circle cx="22" cy="21" r="10" />
+                <path d="M6 52c1.8-10.4 8-16 16-16s14.2 5.6 16 16" />
+                <path d="M39 19c1.6-.9 3.3-1.3 5-1.3 5.3 0 9.6 4.3 9.6 9.6S49.3 37 44 37" />
+                <path d="M42 42c7.2.2 12.8 4.2 15 11" />
+              </svg>
+            </span>
+            <strong>5,000 +</strong>
+            <span>임직원 수</span>
+          </li>
+          <li>
+            <span class="lotte-overview-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64" focusable="false">
+                <path d="M10 53h44" />
+                <path d="M15 53V34h11v19" />
+                <path d="M30 53V17l18-7v43" />
+                <path d="M48 28h8v25" />
+              </svg>
+            </span>
+            <strong>1979</strong>
+            <span>설립년도</span>
+          </li>
+        </ul>
+      </section>
+
+      <!--문제 정의 영역-->
+      <section class="lotte-issue-section" aria-labelledby="lotte-issue-title">
+        <p class="lotte-issue-kicker" id="lotte-issue-title"><strong>02.</strong><span>Problem Analysis</span></p>
+        <ul class="lotte-issue-list" aria-label="롯데 GRS 기존 웹사이트 문제점">
+          <li>
+            <span class="lotte-issue-icon" aria-hidden="true">🔍</span>
+            <h3>Visual Impact</h3>
+            <strong>시각적 임팩트 부족</strong>
+            <p>기업 규모에 비해 정적인 정보 중심 구조로 구성되어 있어 브랜드의 규모감과 매력이 충분히 전달되지 않았습니다.</p>
+          </li>
+          <li>
+            <span class="lotte-issue-icon" aria-hidden="true">🧡</span>
+            <h3>Brand Experience</h3>
+            <strong>브랜드 경험 부족</strong>
+            <p>다양한 브랜드를 운영하고 있지만 각 브랜드의 개성과 스토리를 경험할 수 있는 요소가 부족했습니다.</p>
+          </li>
+          <li>
+            <span class="lotte-issue-icon" aria-hidden="true">🗂️</span>
+            <h3>Content Hierarchy</h3>
+            <strong>콘텐츠 우선순위 모호</strong>
+            <p>ESG, 채용, 창업 등 핵심 정보가 분산되어 있어 원하는 콘텐츠를 빠르게 찾기 어려웠습니다.</p>
+          </li>
+          <li>
+            <span class="lotte-issue-icon" aria-hidden="true">🔍</span>
+            <h3>User Engagement</h3>
+            <strong>몰입 요소 부족</strong>
+            <p>기업 정보 제공에 집중되어 있어 사용자의 관심을 유도할 수 있는 인터랙션과 몰입 요소가 부족했습니다.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!--타깃 페르소나 영역-->
+      <section class="lotte-persona-section" aria-labelledby="lotte-persona-title">
+        <p class="lotte-persona-kicker" id="lotte-persona-title"><strong>03.</strong><span>Target Paresona</span></p>
+
+        <ul class="lotte-persona-list" aria-label="롯데 GRS 타깃 페르소나">
+          <li class="lotte-persona-card">
+            <span class="lotte-persona-badge" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M6 13h20" />
+                <path d="M8 13v12h16V13" />
+                <path d="M10 7h12l4 6H6l4-6Z" />
+                <path d="M13 25v-7h6v7" />
+              </svg>
+            </span>
+            <img src="image/lotte/persona-founder.jpg" alt="예비 창업주 윤서연" />
+            <div class="lotte-persona-content">
+              <header class="lotte-persona-header">
+                <h3>예비 창업주</h3>
+                <span>윤서연 (34세)</span>
+              </header>
+              <p class="lotte-persona-quote">“신뢰할 수 있는 브랜드와 함께 성공적인 창업을 준비하고 싶어요.”</p>
+              <dl class="lotte-persona-meta">
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <circle cx="12" cy="12" r="7" />
+                      <circle cx="12" cy="12" r="2.5" />
+                      <path d="M12 3v3" />
+                      <path d="M12 18v3" />
+                      <path d="M3 12h3" />
+                      <path d="M18 12h3" />
+                    </svg>
+                  </span>특성</dt>
+                  <dd>트렌드에 민감하고, 안정적인 브랜드와 사업성을 중요시함</dd>
+                </div>
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <circle cx="10.5" cy="10.5" r="6.5" />
+                      <path d="m15.5 15.5 5 5" />
+                    </svg>
+                  </span>방문 목적</dt>
+                  <dd>브랜드별 창업 정보 확인, 가맹 절차 및 수익성 분석</dd>
+                </div>
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <path d="M12 20s-7-4.4-7-10.2A4.2 4.2 0 0 1 12 6a4.2 4.2 0 0 1 7 3.8C19 15.6 12 20 12 20Z" />
+                    </svg>
+                  </span>주요 니즈</dt>
+                  <dd>창업 조건, 비용, 성공 사례 등 신뢰도 높은 정보를 원함</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+          <li class="lotte-persona-card">
+            <span class="lotte-persona-badge" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M9 12h14v13H9V12Z" />
+                <path d="M13 12V9h6v3" />
+                <path d="M9 17h14" />
+                <path d="M16 16v3" />
+              </svg>
+            </span>
+            <img src="image/lotte/persona-career.jpg" alt="외식 업계 취업 준비생 이지연" />
+            <div class="lotte-persona-content">
+              <header class="lotte-persona-header">
+                <h3>외식 업계 취업 준비생</h3>
+                <span>이지연 (24세)</span>
+              </header>
+              <p class="lotte-persona-quote">“좋아하는 브랜드에서 성장하며 커리어를 쌓고 싶어요.”</p>
+              <dl class="lotte-persona-meta">
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <circle cx="12" cy="12" r="7" />
+                      <circle cx="12" cy="12" r="2.5" />
+                      <path d="M12 3v3" />
+                      <path d="M12 18v3" />
+                      <path d="M3 12h3" />
+                      <path d="M18 12h3" />
+                    </svg>
+                  </span>특성</dt>
+                  <dd>외식 브랜드와 기업 문화에 관심이 많고, 성장 가능성을 중요하게 생각함</dd>
+                </div>
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <circle cx="10.5" cy="10.5" r="6.5" />
+                      <path d="m15.5 15.5 5 5" />
+                    </svg>
+                  </span>방문 목적</dt>
+                  <dd>채용 공고 확인, 인재상 및 복지, 커리어 성장 기회 탐색</dd>
+                </div>
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <path d="M12 20s-7-4.4-7-10.2A4.2 4.2 0 0 1 12 6a4.2 4.2 0 0 1 7 3.8C19 15.6 12 20 12 20Z" />
+                    </svg>
+                  </span>주요 니즈</dt>
+                  <dd>채용 절차, 직무 정보, 기업 문화 등 정확하고 빠른 정보를 원함</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+          <li class="lotte-persona-card">
+            <span class="lotte-persona-badge" aria-hidden="true">
+              <svg viewBox="0 0 32 32" focusable="false">
+                <path d="M24 7C14 8 8 14 8 24" />
+                <path d="M24 7c1 8-3 15-12 17" />
+                <path d="M13 19c2 1 5 1 8-1" />
+              </svg>
+            </span>
+            <img src="image/lotte/persona-esg.jpg" alt="ESG 관심 사용자 박민수" />
+            <div class="lotte-persona-content">
+              <header class="lotte-persona-header">
+                <h3>ESG 관심 사용자</h3>
+                <span>박민수 (29세)</span>
+              </header>
+              <p class="lotte-persona-quote">“기업의 성장뿐 아니라 사회적 가치를 함께 응원하고 싶어요.”</p>
+              <dl class="lotte-persona-meta">
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <circle cx="12" cy="12" r="7" />
+                      <circle cx="12" cy="12" r="2.5" />
+                      <path d="M12 3v3" />
+                      <path d="M12 18v3" />
+                      <path d="M3 12h3" />
+                      <path d="M18 12h3" />
+                    </svg>
+                  </span>특성</dt>
+                  <dd>환경·사회적 가치에 관심이 많고, 윤리적 소비를 실천함</dd>
+                </div>
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <circle cx="10.5" cy="10.5" r="6.5" />
+                      <path d="m15.5 15.5 5 5" />
+                    </svg>
+                  </span>방문 목적</dt>
+                  <dd>ESG 활동 및 성과 확인, 상생 프로젝트 및 캠페인 정보 탐색</dd>
+                </div>
+                <div>
+                  <dt><span class="lotte-persona-meta-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <path d="M12 20s-7-4.4-7-10.2A4.2 4.2 0 0 1 12 6a4.2 4.2 0 0 1 7 3.8C19 15.6 12 20 12 20Z" />
+                    </svg>
+                  </span>주요 니즈</dt>
+                  <dd>기업의 진정성 있는 ESG 활동과 구체적인 성과를 쉽게 확인하고 싶음</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
+        </ul>
+
+        <div class="lotte-persona-needs">
+          <article>
+            <span class="lotte-persona-alert" aria-hidden="true">!</span>
+            <div>
+              <h3>정보 탐색 니즈</h3>
+              <ul>
+                <li>목적별 메뉴를 통해 창업·채용·ESG 정보를 빠르게 찾고 싶음</li>
+                <li>브랜드별 핵심 가치와 최신 소식을 한눈에 비교하고 싶음</li>
+                <li>복잡한 기업 정보를 짧은 흐름 안에서 이해하고 싶음</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <span class="lotte-persona-alert" aria-hidden="true">!</span>
+            <div>
+              <h3>브랜드 신뢰 니즈</h3>
+              <ul>
+                <li>기업 규모와 운영 역량을 수치와 사례로 확인하고 싶음</li>
+                <li>ESG 활동의 진정성과 성과를 구체적으로 확인하고 싶음</li>
+                <li>신뢰할 수 있는 브랜드라는 인상을 시각적으로 받고 싶음</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!--디자인 시스템 영역-->
+      <section class="lotte-design-section" aria-labelledby="lotte-design-title">
+        <p class="lotte-design-kicker" id="lotte-design-title"><strong>04.</strong><span>Design System</span></p>
+
+        <div class="lotte-design-block lotte-design-color">
+          <h2>Color</h2>
+          <ul class="lotte-color-list" aria-label="롯데 GRS 컬러 시스템">
+            <li>
+              <span class="lotte-color-chip lotte-color-chip--red" aria-hidden="true"></span>
+              <h3><span>Lotte Red</span><strong>#ED1C24</strong></h3>
+              <p>롯데 GRS의 브랜드 아이덴티티를 상징하는 컬러로, 외식 산업에 대한 열정과 브랜드의 에너지를 표현하며 핵심 콘텐츠에 대한 집중도를 높입니다.</p>
+            </li>
+            <li>
+              <span class="lotte-color-chip lotte-color-chip--black" aria-hidden="true"></span>
+              <h3><span>Main color</span><strong>#111111</strong></h3>
+              <p>기업의 신뢰감과 전문성을 전달하는 컬러로, 브랜드의 무게감과 프리미엄 이미지를 강화합니다.</p>
+            </li>
+            <li>
+              <span class="lotte-color-chip lotte-color-chip--gray" aria-hidden="true"></span>
+              <h3><span>Sub color</span><strong>#D4D4D4</strong></h3>
+              <p>정보 콘텐츠의 가독성을 높이고, 주요 컬러 간 균형을 유지하여 안정적인 사용자 경험을 제공합니다.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lotte-design-block lotte-design-typo">
+          <h2>Typography</h2>
+          <div class="lotte-typo-layout">
+            <div class="lotte-typo-copy">
+              <p>Pretendard</p>
+              <span>명확한 정보 전달과 뛰어난 가독성을 바탕으로 다양한 디바이스 환경에서도 일관된 사용자 경험을 제공할 수 있도록 적용하였습니다.</span>
+            </div>
+            <dl class="lotte-typo-spec">
+              <div>
+                <dt>Regular</dt>
+                <dd>Aa</dd>
+              </div>
+              <div>
+                <dt>Medium</dt>
+                <dd>Bb</dd>
+              </div>
+              <div>
+                <dt>SemiBold</dt>
+                <dd>Cc</dd>
+              </div>
+              <div>
+                <dt>Bold</dt>
+                <dd>123</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="lotte-design-block lotte-component-system">
+          <h2>Component System</h2>
+          <div class="lotte-component-layout">
+            <div class="lotte-component-buttons">
+              <h3>Button</h3>
+              <div>
+                <figure>
+                  <figcaption>Default Button</figcaption>
+                  <span>채용정보</span>
+                </figure>
+                <figure>
+                  <figcaption>Active Button</figcaption>
+                  <span class="is-active">채용정보</span>
+                </figure>
+              </div>
+            </div>
+            <div class="lotte-component-tabs">
+              <h3>Tab</h3>
+              <ul aria-label="롯데 GRS 탭 컴포넌트 예시" role="tablist">
+                <li><button class="is-active" type="button" role="tab" aria-selected="true">롯데리아</button></li>
+                <li><button type="button" role="tab" aria-selected="false">엔제리너스</button></li>
+                <li><button type="button" role="tab" aria-selected="false">크리스피크림</button></li>
+                <li><button type="button" role="tab" aria-selected="false">플레이팅</button></li>
+                <li><button type="button" role="tab" aria-selected="false">스텐브루</button></li>
+              </ul>
+            </div>
+          </div>
+          <p>사이트 전반에 사용되는 핵심 UI 요소를 정리하여 일관된 사용자 경험과 효율적인 인터페이스 운영이 가능하도록 설계하였습니다.</p>
+        </div>
       </section>
     </main>
 

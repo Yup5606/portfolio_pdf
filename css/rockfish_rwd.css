@@ -1,17 +1,35 @@
 /*반응형 영역*/
 @media (min-width: 769px) and (max-width: 1280px) {
   .rockfish-hero .project-showcase-copy {
-    padding-top: 70px;
+    padding-top: 62px;
+  }
+
+  .rockfish-hero .project-showcase-logo {
+    width: clamp(190px, 21vw, 260px);
+    margin-bottom: 26px;
   }
 
   .rockfish-hero .project-showcase-mockup {
     width: min(64%, 620px);
   }
+
+  .rockfish-hero .project-showcase-actions {
+    max-width: none;
+  }
+
+  .rockfish-hero .project-showcase-actions a {
+    max-width: none;
+  }
 }
 
 @media (min-width: 1281px) {
   .rockfish-hero .project-showcase-copy {
-    padding-top: clamp(80px, 8vw, 138px);
+    padding-top: clamp(74px, 7vw, 120px);
+  }
+
+  .rockfish-hero .project-showcase-logo {
+    width: clamp(220px, 15vw, 300px);
+    margin-bottom: clamp(28px, 2.4vw, 42px);
   }
 
   .rockfish-hero .project-showcase-copy h1 {
@@ -20,6 +38,14 @@
 
   .rockfish-hero .project-showcase-mockup {
     width: min(60vw, 900px);
+  }
+
+  .rockfish-hero .project-showcase-actions {
+    max-width: none;
+  }
+
+  .rockfish-hero .project-showcase-actions a {
+    max-width: none;
   }
 }
 

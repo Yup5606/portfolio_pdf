@@ -1,7 +1,16 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
 /*폰트 영역*/
 @font-face {
   font-family: "Wild Youth";
   src: url("../image/common/fonts/wild_youth/Wild Youth.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KyoboHandwriting2020ParkDoYeon";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff") format("woff");
+  font-weight: normal;
   font-display: swap;
 }
 
@@ -14,9 +23,10 @@
   --gray-font: #a5a5a5;
   --line: rgba(17, 24, 39, 0.14);
   --white: #ffffff;
-  --font-sans: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
-  --font-serif: "Nanum Myeongjo", "Times New Roman", serif;
-  --font-wild: "Wild Youth", "Nanum Myeongjo", serif;
+  --font-sans: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+  --font-serif: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+  --font-wild: "Wild Youth", "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+  --font-hand: "KyoboHandwriting2020ParkDoYeon", "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
   --project-body-font-size: 12px;
   --project-title-font-size: 18px;
   --project-person-name-font-size: 16px;

@@ -1,5 +1,7 @@
 (function () {
-  const revealItems = document.querySelectorAll(".content-section, .image-story, .parley-role-section, .parley-research-section");
+  const revealItems = document.querySelectorAll(
+    ".content-section, .image-story, .parley-role-section, .parley-research-section, .parley-persona-section, .parley-structure-point-section, .parley-outcome-section, .lotte-persona-section, .lotte-design-section"
+  );
 
   if (!revealItems.length || !("IntersectionObserver" in window)) {
     return;
@@ -189,6 +191,56 @@
 
       item.style.setProperty("--card-x", `${x}px`);
       item.style.setProperty("--card-y", `${y}px`);
+    });
+  });
+})();
+
+(function () {
+  const wireItems = document.querySelectorAll(".parley-wire-list li");
+
+  if (!wireItems.length) {
+    return;
+  }
+
+  wireItems.forEach((item) => {
+    const button = item.querySelector(".parley-wire-button");
+
+    if (!button) {
+      return;
+    }
+
+    button.addEventListener("click", () => {
+      wireItems.forEach((target) => {
+        target.classList.remove("is-active");
+        target.querySelector(".parley-wire-button")?.setAttribute("aria-pressed", "false");
+      });
+
+      item.classList.add("is-active");
+      button.setAttribute("aria-pressed", "true");
+    });
+  });
+})();
+
+(function () {
+  const tabGroups = document.querySelectorAll(".lotte-component-tabs ul");
+
+  if (!tabGroups.length) {
+    return;
+  }
+
+  tabGroups.forEach((group) => {
+    const buttons = group.querySelectorAll("button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((target) => {
+          target.classList.remove("is-active");
+          target.setAttribute("aria-selected", "false");
+        });
+
+        button.classList.add("is-active");
+        button.setAttribute("aria-selected", "true");
+      });
     });
   });
 })();
