@@ -4,7 +4,6 @@
   .about-footer {
     width: calc(100% - 36px);
   }
-
   .about-side-nav {
     position: static;
     display: flex;
@@ -14,7 +13,6 @@
     margin: 6.2em auto 0;
     transform: none;
   }
-
   .about-side-nav a {
     width: auto;
     height: auto;
@@ -22,13 +20,11 @@
     border-radius: 999px;
     font-size: 0.68em;
   }
-
   .about-side-nav a:hover,
   .about-side-nav a:focus-visible,
   .about-side-nav a.is-active {
     transform: none;
   }
-
   .about-hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -36,14 +32,12 @@
     min-height: auto;
     padding: 42px 0 66px;
   }
-
   .about-hero::before {
     top: 12%;
     right: -36vw;
     width: 320px;
     height: 320px;
   }
-
   .about-side-title {
     position: static;
     font-size: clamp(50px, 16vw, 82px);
@@ -51,55 +45,45 @@
     writing-mode: horizontal-tb;
     transform: none;
   }
-
   .about-photo-wrap {
     width: min(84vw, 360px);
     transform: rotate(-1deg);
   }
-
   .about-photo-wrap:hover {
     transform: rotate(0deg) translateY(-6px);
   }
-
   .about-hero > .about-intro,
   .about-hero > .keyword-card,
   .about-hero > .contact-strip {
     grid-column: auto;
   }
-
   .about-intro {
     padding-top: 0;
   }
-
   .keyword-list {
     display: grid;
     grid-template-columns: 1fr;
   }
-
   .contact-strip {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
   }
-
   .about-section-head {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
   }
-
   .skill-grid,
   .tool-category-grid,
   .contact-section {
     display: grid;
     grid-template-columns: 1fr;
   }
-
   .history-track {
     overflow: visible;
     padding: 0;
   }
-
   .history-list {
     display: grid;
     grid-template-columns: 1fr;
@@ -107,7 +91,6 @@
     min-height: auto;
     padding-left: 24px;
   }
-
   .history-list::before {
     top: 0;
     bottom: 0;
@@ -116,17 +99,14 @@
     height: auto;
     transform: none;
   }
-
   .history-item {
     display: grid;
     min-height: auto;
     padding-bottom: 28px;
   }
-
   .history-item::before {
     display: none;
   }
-
   .history-item::after {
     top: 28px;
     bottom: auto;
@@ -136,7 +116,6 @@
     border-width: 3px;
     transform: none;
   }
-
   .history-date {
     position: static;
     display: block;
@@ -147,39 +126,32 @@
     text-align: left;
     transform: none;
   }
-
   .history-item-bottom .history-date {
     transform: none;
   }
-
   .history-copy {
     position: static;
     width: auto;
     padding: 20px;
     transform: none;
   }
-
   .history-item-top,
   .history-item-bottom {
     align-items: start;
   }
-
   .history-item:hover .history-copy,
   .history-item-bottom:hover .history-copy {
     transform: translateX(6px);
   }
-
   .contact-card {
     display: grid;
     grid-template-columns: 1fr;
   }
-
   .license-panel,
   .contact-links {
     display: grid;
     grid-template-columns: 1fr;
   }
-
   .tool-category-card {
     display: grid;
     grid-template-columns: 1fr;
@@ -187,11 +159,9 @@
     min-height: auto;
     padding: 24px;
   }
-
   .tool-category-head {
     margin-bottom: 22px;
   }
-
   .about-footer {
     display: flex;
     align-items: center;
@@ -199,112 +169,91 @@
     gap: 8px;
     font-size: 9px;
   }
-
   .about-footer p {
     min-width: 0;
   }
-
   .about-footer div {
     display: flex;
     flex-shrink: 0;
     gap: 8px;
   }
 }
-
 @media (min-width: 769px) and (max-width: 1280px) {
   .about-main,
   .about-footer {
     width: calc(100% - 112px);
   }
-
   .about-side-nav {
     right: 0.8em;
   }
-
   .about-hero {
     display: grid;
     grid-template-columns: 0.18fr 0.82fr 1fr;
     gap: clamp(26px, 3vw, 48px);
   }
-
   .contact-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .skill-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .license-panel,
   .contact-card {
     display: grid;
     grid-template-columns: 1fr;
   }
-
   .tool-category-card {
     display: grid;
     grid-template-columns: 0.26fr 1fr;
     gap: 24px;
   }
-
   .contact-links {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .contact-section {
     display: block;
   }
 }
-
 @media (min-width: 1281px) and (max-width: 1440px) {
   .about-main,
   .about-footer {
     width: calc(100% - 200px);
   }
-
   .about-side-nav {
     right: 0.8em;
   }
-
   .about-hero {
     display: grid;
     grid-template-columns: 0.18fr 0.82fr 1fr;
     gap: clamp(26px, 3vw, 48px);
   }
-
   .contact-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .skill-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .license-panel,
   .contact-card {
     display: grid;
     grid-template-columns: 1fr;
   }
-
   .tool-category-card {
     display: grid;
     grid-template-columns: 0.26fr 1fr;
     gap: 24px;
   }
-
   .contact-links {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .contact-section {
     display: block;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .about-page::after,
   .about-side-title,
@@ -315,7 +264,6 @@
     transition: none;
   }
 }
-
 @media (max-width: 768px) {
   .about-side-title,
   .about-photo-wrap,

@@ -3,29 +3,28 @@
   --lotte-red: #ed1c24;
   --lotte-hover: #c9161d;
   --lotte-bg: #fffbfb;
+  --lotte-ink: #050505;
+  --lotte-text: #222222;
+  --lotte-card: #eeeeee;
+  --lotte-wire-bg: #f1f1f1;
   background: var(--lotte-bg);
 }
-
 .lotte-hero {
   --showcase-color: var(--lotte-red);
   --showcase-hover: var(--lotte-hover);
   --showcase-bg: var(--lotte-bg);
 }
-
 .lotte-hero .project-showcase-logo {
   width: clamp(76px, 22vw, 104px);
 }
-
 .lotte-hero .project-showcase-mockup {
   width: min(100%, 360px);
 }
-
 .lotte-hero .project-showcase-actions {
   max-width: 190px;
   margin-right: auto;
   margin-left: auto;
 }
-
 .lotte-hero .project-showcase-actions a {
   max-width: 190px;
 }
@@ -35,60 +34,51 @@
   display: grid;
   gap: 42px;
   padding: 76px 18px;
-  color: #050505;
+  color: var(--lotte-ink);
   background: var(--lotte-bg);
 }
-
 .lotte-overview-copy {
   display: grid;
   gap: 30px;
 }
-
 .lotte-section-kicker {
   display: grid;
   gap: 4px;
   margin: 0;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
 }
-
 .lotte-section-kicker strong {
   color: var(--lotte-red);
   font-size: 22px;
   font-weight: 900;
   line-height: 1;
 }
-
 .lotte-section-kicker span {
-  color: #050505;
+  color: var(--lotte-ink);
 }
-
 .lotte-overview-copy h2 {
   margin: 0;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: calc(var(--project-title-font-size) * 1.12);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: 0;
 }
-
 .lotte-overview-copy h2 span {
   color: var(--lotte-red);
 }
-
 .lotte-overview-copy > p:last-child {
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.65;
 }
-
 .lotte-overview-copy br {
   display: none;
 }
-
 .lotte-overview-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -97,7 +87,6 @@
   padding: 0;
   list-style: none;
 }
-
 .lotte-overview-list li {
   display: grid;
   align-content: center;
@@ -105,11 +94,10 @@
   min-height: 166px;
   padding: 24px 12px;
   border-radius: 14px;
-  color: #050505;
+  color: var(--lotte-ink);
   text-align: center;
-  background: #eeeeee;
+  background: var(--lotte-card);
 }
-
 .lotte-overview-icon {
   display: flex;
   align-items: center;
@@ -119,12 +107,10 @@
   margin-bottom: 20px;
   color: var(--lotte-red);
 }
-
 .lotte-overview-icon.material-symbols-outlined {
   font-size: 42px;
   line-height: 54px;
 }
-
 .lotte-overview-list strong {
   display: block;
   margin-bottom: 14px;
@@ -133,9 +119,8 @@
   font-weight: 900;
   line-height: 1;
 }
-
 .lotte-overview-list li > span:last-child {
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: var(--project-body-font-size);
   font-weight: 700;
   line-height: 1.25;
@@ -146,31 +131,27 @@
   display: grid;
   gap: 42px;
   padding: 76px 18px 86px;
-  color: #050505;
+  color: var(--lotte-ink);
   background: var(--lotte-bg);
 }
-
 .lotte-issue-kicker {
   display: grid;
   gap: 4px;
   margin: 0;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
 }
-
 .lotte-issue-kicker strong {
   color: var(--lotte-red);
   font-size: 24px;
   font-weight: 900;
   line-height: 1;
 }
-
 .lotte-issue-kicker span {
-  color: #050505;
+  color: var(--lotte-ink);
 }
-
 .lotte-issue-list {
   display: grid;
   gap: 18px;
@@ -178,18 +159,16 @@
   padding: 0;
   list-style: none;
 }
-
 .lotte-issue-list li {
   display: grid;
   justify-items: center;
   min-height: 300px;
   padding: 34px 24px;
   border-radius: 14px;
-  color: #050505;
+  color: var(--lotte-ink);
   text-align: center;
-  background: #eeeeee;
+  background: var(--lotte-card);
 }
-
 .lotte-issue-icon {
   display: inline-flex;
   align-items: center;
@@ -199,7 +178,6 @@
   font-size: 52px;
   line-height: 1;
 }
-
 .lotte-issue-list h3 {
   margin: 0 0 20px;
   color: var(--lotte-red);
@@ -208,19 +186,17 @@
   line-height: 1.18;
   letter-spacing: 0;
 }
-
 .lotte-issue-list strong {
   display: block;
   margin-bottom: 24px;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: var(--project-body-font-size);
   font-weight: 800;
   line-height: 1.35;
 }
-
 .lotte-issue-list p {
   margin: 0;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.45;
@@ -231,31 +207,27 @@
   display: grid;
   gap: 40px;
   padding: 76px 18px 92px;
-  color: #050505;
+  color: var(--lotte-ink);
   background: var(--lotte-bg);
 }
-
 .lotte-persona-kicker {
   display: grid;
   gap: 4px;
   margin: 0;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: 16px;
   font-weight: 800;
   line-height: 1.2;
 }
-
 .lotte-persona-kicker strong {
   color: var(--lotte-red);
   font-size: 24px;
   font-weight: 900;
   line-height: 1;
 }
-
 .lotte-persona-kicker span {
-  color: #050505;
+  color: var(--lotte-ink);
 }
-
 .lotte-persona-list {
   display: grid;
   align-items: stretch;
@@ -264,7 +236,6 @@
   padding: 0;
   list-style: none;
 }
-
 .lotte-persona-card {
   position: relative;
   display: grid;
@@ -275,32 +246,28 @@
   border: 1px solid rgba(5, 5, 5, 0.08);
   border-radius: 16px;
   overflow: hidden;
-  color: #050505;
+  color: var(--lotte-ink);
   background: var(--white);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
   transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
-
 .lotte-persona-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
 }
-
 .lotte-persona-card > img {
   width: 100%;
   aspect-ratio: 1.26 / 1;
   object-fit: cover;
   object-position: center;
-  background: #eeeeee;
+  background: var(--lotte-card);
 }
-
 .lotte-persona-content {
   display: grid;
   align-content: start;
   gap: 24px;
   padding: 28px 22px 32px;
 }
-
 .lotte-persona-header {
   display: flex;
   align-items: baseline;
@@ -308,7 +275,6 @@
   gap: 16px;
   min-width: 0;
 }
-
 .lotte-persona-header h3 {
   margin: 0;
   color: var(--lotte-red);
@@ -316,24 +282,21 @@
   font-weight: 700;
   line-height: 1.2;
 }
-
 .lotte-persona-header span {
   flex: 0 0 auto;
-  color: #222222;
+  color: var(--lotte-text);
   font-size: calc(var(--project-body-font-size) * 0.95);
   font-weight: 600;
   line-height: 1.2;
   white-space: nowrap;
 }
-
 .lotte-persona-quote {
   margin: 0;
-  color: #222222;
+  color: var(--lotte-text);
   font-size: calc(var(--project-body-font-size) * 1.05);
   font-weight: 500;
   line-height: 1.55;
 }
-
 .lotte-persona-meta {
   display: grid;
   gap: 0;
@@ -341,14 +304,12 @@
   padding-top: 4px;
   border-top: 1px solid rgba(5, 5, 5, 0.12);
 }
-
 .lotte-persona-meta div {
   display: grid;
   grid-template-columns: 92px minmax(0, 1fr);
   gap: 12px;
   padding: 18px 0 0;
 }
-
 .lotte-persona-meta dt {
   display: flex;
   align-items: center;
@@ -359,15 +320,13 @@
   font-weight: 800;
   line-height: 1.3;
 }
-
 .lotte-persona-meta dd {
   margin: 0;
-  color: #222222;
+  color: var(--lotte-text);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.55;
 }
-
 .lotte-persona-meta-icon {
   display: inline-flex;
   align-items: center;
@@ -377,12 +336,10 @@
   line-height: 1;
   vertical-align: -0.16em;
 }
-
 .lotte-persona-needs {
   display: grid;
   gap: 18px;
 }
-
 .lotte-persona-needs article {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -391,10 +348,9 @@
   padding: 24px 20px;
   border: 1px solid rgba(5, 5, 5, 0.12);
   border-radius: 16px;
-  color: #050505;
+  color: var(--lotte-ink);
   background: var(--white);
 }
-
 .lotte-persona-alert {
   display: inline-flex;
   align-items: center;
@@ -408,15 +364,13 @@
   line-height: 1;
   background: var(--lotte-red);
 }
-
 .lotte-persona-needs h3 {
   margin: 0 0 12px;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: var(--project-body-font-size);
   font-weight: 900;
   line-height: 1.2;
 }
-
 .lotte-persona-needs ul {
   display: grid;
   gap: 8px;
@@ -424,16 +378,14 @@
   padding: 0;
   list-style: none;
 }
-
 .lotte-persona-needs li {
   position: relative;
   padding-left: 14px;
-  color: #222222;
+  color: var(--lotte-text);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.45;
 }
-
 .lotte-persona-needs li::before {
   position: absolute;
   content: "\e5df";
@@ -443,43 +395,35 @@
   font-size: 1.2em;
   line-height: 1;
 }
-
 .lotte-persona-section.reveal .lotte-persona-kicker,
 .lotte-persona-section.reveal .lotte-persona-card,
 .lotte-persona-section.reveal .lotte-persona-needs article {
   opacity: 0;
   transform: translateY(24px);
 }
-
 .lotte-persona-section.reveal.is-visible .lotte-persona-kicker,
 .lotte-persona-section.reveal.is-visible .lotte-persona-card,
 .lotte-persona-section.reveal.is-visible .lotte-persona-needs article {
   opacity: 1;
   transform: translateY(0);
 }
-
 .lotte-persona-section.reveal .lotte-persona-kicker,
 .lotte-persona-section.reveal .lotte-persona-card,
 .lotte-persona-section.reveal .lotte-persona-needs article {
   transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.45s ease;
 }
-
 .lotte-persona-section.reveal .lotte-persona-card:nth-child(2) {
   transition-delay: 0.08s;
 }
-
 .lotte-persona-section.reveal .lotte-persona-card:nth-child(3) {
   transition-delay: 0.16s;
 }
-
 .lotte-persona-section.reveal .lotte-persona-needs article:nth-child(1) {
   transition-delay: 0.18s;
 }
-
 .lotte-persona-section.reveal .lotte-persona-needs article:nth-child(2) {
   transition-delay: 0.26s;
 }
-
 .lotte-persona-section.reveal.is-visible .lotte-persona-card:hover {
   transition-delay: 0s;
   transform: translateY(-8px);
@@ -494,7 +438,6 @@
   color: var(--white);
   background: #000000;
 }
-
 .lotte-design-kicker {
   display: grid;
   gap: 4px;
@@ -504,19 +447,16 @@
   font-weight: 700;
   line-height: 1.2;
 }
-
 .lotte-design-kicker strong {
   color: var(--lotte-red);
   font-size: 24px;
   font-weight: 900;
   line-height: 1;
 }
-
 .lotte-design-block {
   display: grid;
   gap: 28px;
 }
-
 .lotte-design-block h2 {
   margin: 0;
   color: var(--white);
@@ -525,7 +465,6 @@
   line-height: 1.2;
   letter-spacing: 0;
 }
-
 .lotte-color-list {
   display: grid;
   gap: 28px;
@@ -533,33 +472,27 @@
   padding: 0;
   list-style: none;
 }
-
 .lotte-color-list li {
   display: grid;
   grid-template-rows: auto auto 1fr;
   gap: 14px;
 }
-
 .lotte-color-chip {
   display: block;
   width: 100%;
   height: 132px;
   border-radius: 14px;
 }
-
 .lotte-color-chip--red {
   background: var(--lotte-red);
 }
-
 .lotte-color-chip--black {
   border: 1px solid rgba(255, 255, 255, 0.52);
   background: #111111;
 }
-
 .lotte-color-chip--gray {
   background: #d4d4d4;
 }
-
 .lotte-color-list h3 {
   display: flex;
   gap: 18px;
@@ -569,12 +502,10 @@
   font-weight: 700;
   line-height: 1.25;
 }
-
 .lotte-color-list h3 strong {
   color: var(--white);
   font-weight: 700;
 }
-
 .lotte-color-list p,
 .lotte-typo-copy span,
 .lotte-component-system > p {
@@ -583,17 +514,14 @@
   font-size: var(--project-body-font-size);
   font-weight: 300;
 }
-
 .lotte-typo-layout {
   display: grid;
   gap: 34px;
 }
-
 .lotte-typo-copy {
   display: grid;
   gap: 18px;
 }
-
 .lotte-typo-copy p {
   margin: 0;
   color: var(--white);
@@ -602,7 +530,6 @@
   line-height: 1;
   letter-spacing: 0;
 }
-
 .lotte-typo-spec {
   display: grid;
   gap: 16px;
@@ -610,14 +537,12 @@
   padding-left: 22px;
   border-left: 1px solid rgba(255, 255, 255, 0.72);
 }
-
 .lotte-typo-spec div {
   display: grid;
   grid-template-columns: minmax(86px, 1fr) minmax(48px, auto);
   align-items: baseline;
   gap: 24px;
 }
-
 .lotte-typo-spec dt,
 .lotte-typo-spec dd {
   margin: 0;
@@ -625,43 +550,35 @@
   font-size: calc(var(--project-title-font-size) * 1.1);
   line-height: 1.15;
 }
-
 .lotte-typo-spec div:nth-child(1) dt,
 .lotte-typo-spec div:nth-child(1) dd {
   font-weight: 400;
 }
-
 .lotte-typo-spec div:nth-child(2) dt,
 .lotte-typo-spec div:nth-child(2) dd {
   font-weight: 500;
 }
-
 .lotte-typo-spec div:nth-child(3) dt,
 .lotte-typo-spec div:nth-child(3) dd {
   font-weight: 700;
 }
-
 .lotte-typo-spec div:nth-child(4) dt,
 .lotte-typo-spec div:nth-child(4) dd {
   font-weight: 800;
 }
-
 .lotte-component-system {
   gap: 30px;
 }
-
 .lotte-component-layout {
   display: grid;
   align-items: start;
   gap: 36px;
 }
-
 .lotte-component-buttons,
 .lotte-component-tabs {
   display: grid;
   gap: 18px;
 }
-
 .lotte-component-buttons h3,
 .lotte-component-tabs h3 {
   margin: 0;
@@ -670,19 +587,16 @@
   font-weight: 700;
   line-height: 1.2;
 }
-
 .lotte-component-buttons > div {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
 }
-
 .lotte-component-buttons figure {
   display: grid;
   gap: 10px;
   margin: 0;
 }
-
 .lotte-component-buttons figcaption {
   color: var(--white);
   font-size: var(--project-body-font-size);
@@ -690,7 +604,6 @@
   line-height: 1.2;
   text-align: center;
 }
-
 .lotte-component-buttons figure span {
   display: inline-flex;
   align-items: center;
@@ -705,11 +618,9 @@
   line-height: 1;
   background: var(--lotte-red);
 }
-
 .lotte-component-buttons figure span.is-active {
   background: var(--lotte-hover);
 }
-
 .lotte-component-buttons figure span::after {
   content: "\f1df";
   font-family: "Material Symbols Outlined";
@@ -717,11 +628,9 @@
   margin-left: 10px;
   transform-origin: left center;
 }
-
 .lotte-component-buttons figure span.is-active::after {
   transform: translateX(8px);
 }
-
 .lotte-component-tabs ul {
   display: flex;
   flex-wrap: nowrap;
@@ -731,13 +640,11 @@
   padding: 0;
   list-style: none;
 }
-
 .lotte-component-tabs li {
   display: block;
   flex: 1 1 0;
   min-width: 0;
 }
-
 .lotte-component-tabs button {
   position: relative;
   display: inline-flex;
@@ -756,16 +663,13 @@
   cursor: pointer;
   transition: color 0.25s ease;
 }
-
 .lotte-component-tabs button:hover {
   color: rgba(255, 255, 255, 0.78);
 }
-
 .lotte-component-tabs button.is-active {
   color: var(--lotte-red);
   background: transparent;
 }
-
 .lotte-component-tabs button.is-active::after {
   content: "";
   position: absolute;
@@ -775,28 +679,23 @@
   height: 1px;
   background: var(--lotte-red);
 }
-
 .lotte-design-section.reveal .lotte-design-kicker,
 .lotte-design-section.reveal .lotte-design-block {
   opacity: 0;
   transform: translateY(24px);
 }
-
 .lotte-design-section.reveal.is-visible .lotte-design-kicker,
 .lotte-design-section.reveal.is-visible .lotte-design-block {
   opacity: 1;
   transform: translateY(0);
 }
-
 .lotte-design-section.reveal .lotte-design-kicker,
 .lotte-design-section.reveal .lotte-design-block {
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: var(--motion-rise);
 }
-
 .lotte-design-section.reveal .lotte-design-block:nth-of-type(2) {
   transition-delay: 0.08s;
 }
-
 .lotte-design-section.reveal .lotte-design-block:nth-of-type(3) {
   transition-delay: 0.16s;
 }
@@ -804,60 +703,88 @@
 /* 롯데 와이어프레임 영역 */
 .lotte-wireframe-section {
   padding: 76px 18px 92px;
-  color: #050505;
+  color: var(--lotte-ink);
   background: var(--lotte-bg);
 }
-
 .lotte-wireframe-inner {
   display: grid;
   gap: 36px;
 }
-
 .lotte-wireframe-inner h2 {
   margin: 0;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: var(--project-title-font-size);
   font-weight: 800;
   line-height: 1.3;
 }
-
 .lotte-wireframe-layout {
   display: grid;
   gap: 24px;
   align-items: start;
 }
-
 .lotte-wireframe-shot {
+  position: relative;
   margin: 0;
   overflow: hidden;
-  background: #f1f1f1;
+  background: var(--lotte-wire-bg);
+  cursor: zoom-in;
 }
-
 .lotte-wireframe-shot img {
   width: 100%;
   height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+.lotte-wireframe-magnifier {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  width: 112px;
+  height: 112px;
+  border: 1px solid rgba(237, 28, 36, 0.72);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.lotte-wireframe-shot.is-magnifier-visible .lotte-wireframe-magnifier {
+  display: block;
+}
+.lotte-wireframe-section.reveal .lotte-section-kicker,
+.lotte-wireframe-section.reveal .lotte-wireframe-shot {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.lotte-wireframe-section.reveal.is-visible .lotte-section-kicker,
+.lotte-wireframe-section.reveal.is-visible .lotte-wireframe-shot {
+  opacity: 1;
+  transform: translateY(0);
+}
+.lotte-wireframe-section.reveal .lotte-section-kicker,
+.lotte-wireframe-section.reveal .lotte-wireframe-shot {
+  transition: var(--motion-rise);
+}
+.lotte-wireframe-section.reveal .lotte-wireframe-shot--right {
+  transition-delay: 0.08s;
 }
 
 /* 롯데 사이트맵 개선 영역 */
 .lotte-sitemap-section {
   padding: 76px 18px 92px;
   color: var(--white);
-  background: #050505;
+  background: var(--lotte-ink);
 }
-
 .lotte-sitemap-inner {
   display: grid;
   gap: 34px;
 }
-
 .lotte-section-kicker--dark {
   color: var(--white);
 }
-
 .lotte-section-kicker--dark span {
   color: var(--white);
 }
-
 .lotte-sitemap-inner h2 {
   margin: 0;
   color: var(--white);
@@ -865,93 +792,81 @@
   font-weight: 800;
   line-height: 1.2;
 }
-
 .lotte-sitemap-figure {
   display: flex;
   justify-content: center;
   margin: 0 0 44px;
 }
-
 .lotte-sitemap-figure img {
   width: 100%;
   height: auto;
 }
-
 .lotte-sitemap-figure--wide img {
   width: min(100%, 920px);
 }
+
 /* 롯데 퍼블리싱 개발 영역 */
 .lotte-publishing-section {
   display: grid;
   gap: 44px;
   padding: 76px 18px 92px;
-  color: #050505;
+  color: var(--lotte-ink);
   background: var(--lotte-bg);
 }
-
 .lotte-publishing-copy {
   display: grid;
   gap: 24px;
 }
-
 .lotte-publishing-copy h2 {
   margin: 0;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: var(--project-title-font-size);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: 0;
 }
-
 .lotte-publishing-copy > p:last-child {
   margin: 0;
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.7;
   word-break: keep-all;
 }
-
 .lotte-device-layout {
   display: grid;
   align-items: end;
   gap: 28px;
 }
-
 .lotte-device {
   display: grid;
   gap: 10px;
   margin: 0;
 }
-
 .lotte-device-caption {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  color: #050505;
+  color: var(--lotte-ink);
   line-height: 1;
 }
-
 .lotte-device-title {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #050505;
+  color: var(--lotte-ink);
 }
-
 .lotte-device-icon {
   color: var(--lotte-red);
   font-size: 20px;
   line-height: 1;
 }
-
 .lotte-device-title strong {
-  color: #050505;
+  color: var(--lotte-ink);
   font-size: 18px;
   font-weight: 900;
   line-height: 1;
 }
-
 .lotte-device-size {
   padding-left: 32px;
   color: #555;
@@ -959,21 +874,17 @@
   font-weight: 600;
   line-height: 1;
 }
-
 .lotte-device img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
-
 .lotte-device--desktop img {
   max-width: 520px;
 }
-
 .lotte-device--tablet img {
   max-width: 220px;
 }
-
 .lotte-device--mobile img {
   max-width: 140px;
 }

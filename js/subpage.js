@@ -1,6 +1,6 @@
 (function () {
   const revealItems = document.querySelectorAll(
-    ".content-section, .image-story, .parley-role-section, .parley-research-section, .parley-persona-section, .parley-structure-point-section, .parley-outcome-section, .lotte-persona-section, .lotte-design-section"
+    ".content-section, .image-story, .parley-role-section, .parley-research-section, .parley-persona-section, .parley-point-section, .parley-outcome-section, .lotte-persona-section, .lotte-design-section, .lotte-wireframe-section"
   );
 
   if (!revealItems.length || !("IntersectionObserver" in window)) {
@@ -241,6 +241,54 @@
         button.classList.add("is-active");
         button.setAttribute("aria-selected", "true");
       });
+    });
+  });
+})();
+
+(function () {
+  const wireframeShots = document.querySelectorAll(".lotte-wireframe-shot");
+
+  if (!wireframeShots.length || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    return;
+  }
+
+  const zoom = 2.15;
+
+  wireframeShots.forEach((shot) => {
+    const image = shot.querySelector("img");
+
+    if (!image) {
+      return;
+    }
+
+    const magnifier = document.createElement("span");
+    magnifier.className = "lotte-wireframe-magnifier";
+    magnifier.setAttribute("aria-hidden", "true");
+    shot.appendChild(magnifier);
+
+    const updateMagnifier = (event) => {
+      const imageRect = image.getBoundingClientRect();
+      const shotRect = shot.getBoundingClientRect();
+      const lensSize = Number.parseFloat(window.getComputedStyle(magnifier).width) || 112;
+      const x = event.clientX - imageRect.left;
+      const y = event.clientY - imageRect.top;
+
+      if (x < 0 || y < 0 || x > imageRect.width || y > imageRect.height) {
+        shot.classList.remove("is-magnifier-visible");
+        return;
+      }
+
+      magnifier.style.left = `${event.clientX - shotRect.left}px`;
+      magnifier.style.top = `${event.clientY - shotRect.top}px`;
+      magnifier.style.backgroundImage = `url("${image.currentSrc || image.src}")`;
+      magnifier.style.backgroundSize = `${imageRect.width * zoom}px ${imageRect.height * zoom}px`;
+      magnifier.style.backgroundPosition = `${-(x * zoom - lensSize / 2)}px ${-(y * zoom - lensSize / 2)}px`;
+      shot.classList.add("is-magnifier-visible");
+    };
+
+    shot.addEventListener("pointermove", updateMagnifier);
+    shot.addEventListener("pointerleave", () => {
+      shot.classList.remove("is-magnifier-visible");
     });
   });
 })();

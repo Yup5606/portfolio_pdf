@@ -6,7 +6,6 @@
     --project-person-name-font-size: clamp(22px, 1.65vw, 28px);
     --project-skill-icon-size: clamp(64px, 5vw, 80px);
   }
-
   .site-nav,
   .main-nav {
     top: 18px;
@@ -14,19 +13,16 @@
     left: 20px;
     padding: 5px 18px;
   }
-
   .site-nav__logo,
   .main-nav-logo {
     width: 3.2em;
   }
-
   .site-nav nav,
   .main-nav nav {
     max-width: none;
     font-size: 0.78em;
   }
 }
-
 @media (min-width: 1280px) {
   .site-nav,
   .main-nav {
@@ -35,100 +31,61 @@
     left: 34px;
     padding: 5px 22px;
   }
-
   .site-nav__logo,
   .main-nav-logo {
     width: 4em;
   }
 }
-
 @media (min-width: 1281px) {
-  .project-hero {
-    display: grid;
-    align-items: center;
-    grid-template-columns: minmax(260px, 0.86fr) minmax(420px, 1.15fr);
-    min-height: 100vh;
-    padding: clamp(108px, 10vw, 168px) 100px clamp(68px, 6vw, 110px);
-  }
-
-  .project-actions {
-    position: absolute;
-    right: 100px;
-    bottom: clamp(30px, 4.4vw, 78px);
-    width: auto;
-    margin-top: 0;
-  }
-
-  .project-actions a {
-    width: auto;
-  }
-
   .image-story {
     grid-template-columns: minmax(280px, 0.9fr) minmax(280px, 1fr);
     gap: clamp(28px, 5vw, 88px);
     padding: clamp(76px, 8vw, 142px) 100px;
   }
-
   .content-section {
     padding: clamp(78px, 8vw, 150px) 100px;
   }
-
   .section-heading {
     grid-template-columns: minmax(140px, 0.28fr) minmax(280px, 1fr);
   }
-
   .screen-grid,
   .frame-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .screen-grid--three {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .phone-row {
     grid-template-columns: repeat(4, minmax(180px, 1fr));
   }
-
   .project-footer {
     gap: 28px;
     padding: 28px 100px;
     font-size: 14px;
   }
-
   .project-footer div {
     gap: 28px;
   }
-
   .project-showcase-hero {
     min-height: max(100vh, 860px);
     padding: clamp(96px, 6.5vw, 132px) 100px clamp(34px, 2.5vw, 48px);
   }
-
   .project-showcase-circle {
     top: min(-72vw, -840px);
     width: min(142vw, 2100px);
     min-width: 980px;
   }
-
   .project-showcase-logo {
     width: clamp(130px, 12vw, 230px);
     margin: 0 auto clamp(24px, 2.8vw, 44px);
   }
-
   .project-showcase-copy h1 {
     font-size: clamp(40px, 4.2vw, 72px);
   }
-
   .project-showcase-copy p {
     font-size: clamp(17px, 1.32vw, 24px);
   }
-
   .project-showcase-mockup {
     width: min(74vw, 1180px);
     margin: clamp(42px, 4.2vw, 78px) auto clamp(110px, 9vw, 156px);
   }
-
   .project-showcase-actions {
     position: absolute;
     right: auto;
@@ -139,7 +96,6 @@
     margin-top: 0;
     transform: translateX(-50%);
   }
-
   .project-showcase-actions a {
     flex: 0 0 auto;
     min-width: 190px;
@@ -147,7 +103,6 @@
     padding: 0 26px;
     font-size: 18px;
   }
-
   .project-showcase-details {
     position: absolute;
     right: 100px;
@@ -158,68 +113,41 @@
     width: auto;
     margin-top: 0;
   }
-
   .project-showcase-info {
     flex: 0 1 auto;
     font-size: clamp(14px, 1.2vw, 24px);
   }
-
   .project-showcase-info strong {
     font-size: clamp(18px, 1.6vw, 26px);
   }
 }
-
 @media (min-width: 769px) and (max-width: 1280px) {
-  .project-hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-
-  .hero-circle {
-    transform: translate(-50%, -36%);
-  }
-
-  .project-actions {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    grid-column: 1;
-    margin-top: 12px;
-  }
-
   .project-showcase-hero {
     display: block;
     min-height: max(100vh, 820px);
     padding-top: 112px;
     padding-bottom: 40px;
   }
-
   .project-showcase-circle {
     top: -760px;
     width: 1420px;
     min-width: 1420px;
   }
-
   .project-showcase-logo {
     width: clamp(150px, 15vw, 190px);
     margin-bottom: 28px;
   }
-
   .project-showcase-copy h1 {
     font-size: clamp(44px, 5vw, 60px);
   }
-
   .project-showcase-copy p {
     font-size: clamp(17px, 1.8vw, 21px);
   }
-
   .project-showcase-mockup {
     width: min(86vw, 920px);
     margin-top: 48px;
     margin-bottom: 132px;
   }
-
   .project-showcase-actions {
     position: absolute;
     left: 50%;
@@ -229,14 +157,12 @@
     margin-top: 0;
     transform: translateX(-50%);
   }
-
   .project-showcase-actions a {
     flex: 0 0 auto;
     min-width: 170px;
     min-height: 50px;
     font-size: 16px;
   }
-
   .project-showcase-details {
     position: absolute;
     right: clamp(22px, 2vw, 34px);
@@ -246,59 +172,44 @@
     width: auto;
     margin-top: 0;
   }
-
   .project-showcase-info {
     flex: 0 1 auto;
     font-size: 17px;
   }
-
   .project-showcase-info strong {
     font-size: 19px;
   }
-
   .image-story,
   .section-heading {
     display: grid;
     grid-template-columns: 1fr;
   }
-
   .phone-row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 @media (min-width: 1281px) and (max-width: 1440px) {
-  .project-hero {
-    padding-right: 100px;
-    padding-left: 100px;
-  }
-
   .project-showcase-hero {
     min-height: max(100vh, 820px);
   }
-
   .project-showcase-circle {
     top: -920px;
     width: 1820px;
     min-width: 1820px;
   }
-
   .project-showcase-logo {
     width: clamp(150px, 15vw, 190px);
     margin-top: 50px;
     margin-bottom: 50px;
   }
-
   .project-showcase-mockup {
     width: min(78vw, 1060px);
     margin-bottom: 136px;
   }
-
   .project-showcase-actions {
     bottom: 104px;
   }
-
   .content-section,
   .image-story {
     padding-right: 100px;

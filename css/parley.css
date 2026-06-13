@@ -5,22 +5,21 @@
   --parley-mint-hover: #74c9ce;
   --parley-bg: #f9f9f9;
   --parley-ink: #222;
+  --parley-text: #050505;
+  --parley-dark: #222;
   --parley-light-gray: #f1f2f3;
   --parley-light-gray-rgb: 241, 242, 243;
   --parley-light-text: #eef5f6;
   background: var(--parley-bg);
 }
-
 .parley-hero {
   --showcase-color: var(--parley-mint);
   --showcase-hover: var(--parley-mint-hover);
   --showcase-bg: var(--parley-bg);
 }
-
 .parley-hero .project-showcase-mockup {
   width: min(100%, 500px);
 }
-
 .parley-project .content-section,
 .parley-project .content-section:nth-of-type(odd) {
   background: var(--parley-bg);
@@ -39,7 +38,6 @@
   text-align: center;
   background: #000814;
 }
-
 .parley-report-section::before {
   position: absolute;
   inset: -12px;
@@ -49,20 +47,17 @@
   filter: blur(3px);
   transform: scale(1.04);
 }
-
 .parley-report-section::after {
   position: absolute;
   inset: 0;
   content: "";
   background: radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.12), rgba(0, 7, 20, 0.38) 38%, rgba(0, 4, 14, 0.76) 100%);
 }
-
 .parley-report-content {
   position: relative;
   z-index: 2;
   width: 100%;
 }
-
 .parley-report-content h2 {
   margin: 0 0 34px;
   color: rgba(255, 255, 255, 0.96);
@@ -71,12 +66,10 @@
   line-height: 1.35;
   letter-spacing: 0;
 }
-
 .parley-report-copy {
   display: grid;
   gap: 28px;
 }
-
 .parley-report-copy p {
   margin: 0;
   color: rgba(255, 255, 255, 0.92);
@@ -85,11 +78,9 @@
   line-height: 1.78;
   letter-spacing: 0;
 }
-
 .parley-report-copy br {
   display: none;
 }
-
 .parley-report-content strong {
   color: var(--white);
   font-size: inherit;
@@ -101,64 +92,56 @@
   display: grid;
   min-height: auto;
   padding: 76px 18px 70px;
-  color: #222;
-  background: #f9f9f9;
+  color: var(--parley-ink);
+  background: var(--parley-bg);
 }
-
 .parley-role-layout {
   display: grid;
   gap: 56px;
   width: 100%;
   margin: 0 auto;
 }
-
 .parley-role-group {
   display: grid;
   gap: 42px;
 }
-
 .parley-role-card {
   display: grid;
   justify-items: center;
   gap: 20px;
-  color: #222;
+  color: var(--parley-ink);
 }
-
 .parley-role-card h2,
 .parley-role-card h3 {
   margin: 0;
-  color: #222;
+  color: var(--parley-ink);
   font-size: var(--project-person-name-font-size);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0;
 }
-
 .parley-skill-panel h2 {
   margin: 0;
-  color: #222;
+  color: var(--parley-ink);
   font-size: var(--project-title-font-size);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0;
 }
-
 .parley-profile {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
 }
-
 .parley-role-percent {
   margin: 0;
-  color: #222;
+  color: var(--parley-ink);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.45;
   text-align: center;
 }
-
 .parley-task-list,
 .parley-member-list,
 .parley-skill-list {
@@ -167,22 +150,19 @@
   padding: 0;
   list-style: none;
 }
-
 .parley-task-list {
   gap: 22px;
   width: 100%;
 }
-
 .parley-task-list li,
 .parley-member-list li {
   position: relative;
   padding-left: 16px;
-  color: #222;
+  color: var(--parley-ink);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.45;
 }
-
 .parley-task-list li::before,
 .parley-member-list li::before {
   position: absolute;
@@ -193,12 +173,10 @@
   content: "";
   background: url("../image/common/icon/caret-right.svg") center / contain no-repeat;
 }
-
 .parley-member-list {
   gap: 12px;
   width: 90%;
 }
-
 .parley-team-note {
   margin: 0;
   color: var(--gray-font);
@@ -207,18 +185,15 @@
   line-height: 1.5;
   text-align: center;
 }
-
 .parley-skill-panel {
   display: grid;
   gap: 28px;
-  color: #222;
+  color: var(--parley-ink);
 }
-
 .parley-skill-list {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
 }
-
 .parley-skill-list li {
   position: relative;
   display: grid;
@@ -231,7 +206,7 @@
   border: 1px solid rgba(34, 34, 34, 0.1);
   border-radius: 18px;
   overflow: hidden;
-  color: #222;
+  color: var(--parley-ink);
   font-size: var(--project-body-font-size);
   font-weight: 700;
   line-height: 1.25;
@@ -240,7 +215,6 @@
   box-shadow: 0 14px 34px rgba(34, 34, 34, 0.06);
   transition: border-color 240ms ease, color 240ms ease, box-shadow 240ms ease;
 }
-
 .parley-skill-list li::before {
   position: absolute;
   top: var(--card-y, 50%);
@@ -256,18 +230,15 @@
   transform: translate(-50%, -50%);
   transition: opacity 240ms ease;
 }
-
 .parley-skill-list li:hover,
 .parley-skill-list li:focus-within {
   color: #12777d;
   box-shadow: 0 18px 42px rgba(18, 119, 125, 0.13);
 }
-
 .parley-skill-list li:hover::before,
 .parley-skill-list li:focus-within::before {
   opacity: 1;
 }
-
 .parley-skill-list img {
   position: relative;
   z-index: 2;
@@ -275,7 +246,6 @@
   height: calc(var(--project-skill-icon-size) * 0.72);
   object-fit: contain;
 }
-
 .parley-skill-list span {
   position: relative;
   z-index: 2;
@@ -286,76 +256,65 @@
 .parley-research-section {
   display: block;
   padding: 78px 18px 74px;
-  color: #050505;
-  background: #f9f9f9;
+  color: var(--parley-text);
+  background: var(--parley-bg);
 }
-
 .parley-research-inner {
   width: 100%;
   margin: 0 auto;
 }
-
 .parley-research-inner h2 {
   margin: 0 0 42px;
-  color: #050505;
+  color: var(--parley-text);
   font-size: var(--project-title-font-size);
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0;
 }
-
-.parley-research-chart-grid {
+.parley-chart-grid {
   display: grid;
   gap: 46px;
 }
-
 .parley-research-card {
   display: grid;
   gap: 24px;
 }
-
 .parley-research-card h3 {
   margin: 0;
-  color: #050505;
+  color: var(--parley-text);
   font-size: calc(var(--project-body-font-size) * 1.25);
   font-weight: 700;
   line-height: 1.35;
   text-align: center;
   letter-spacing: 0;
 }
-
 .parley-pie-chart {
   position: relative;
   width: min(100%, 300px);
   aspect-ratio: 1;
   margin: 0 auto;
 }
-
 .parley-pie-chart svg {
   display: block;
   width: 100%;
   height: 100%;
   overflow: visible;
 }
-
 .parley-pie-segments path {
   stroke: transparent;
   stroke-width: 0;
 }
-
 .parley-pie-segment {
   cursor: pointer;
   transform-box: fill-box;
   transform-origin: center;
   transition: transform 280ms ease, filter 280ms ease;
 }
-
 .parley-pie-segment:hover {
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.18));
   transform: translate(var(--hover-x), var(--hover-y)) scale(1.01);
 }
-
 .parley-pie-labels text {
   dominant-baseline: middle;
   font-family: var(--font-sans);
@@ -366,54 +325,45 @@
   opacity: 0;
   transition: opacity 300ms ease;
 }
-
 .parley-pie-labels text.is-primary {
   fill: var(--white);
   font-size: 13px;
   font-weight: 800;
 }
-
 .parley-pie-labels text.is-muted {
   fill: rgba(0, 0, 0, 0.5);
 }
-
 .parley-pie-labels text.is-muted.is-on-color {
   fill: rgba(53, 53, 53, 0.5);
 }
-
 .parley-pie-labels text.is-small {
   font-size: 6px;
 }
-
 .parley-pie-chart.is-complete .parley-pie-labels text {
   opacity: 1;
 }
-
 .parley-research-summary {
   display: grid;
   gap: 8px;
   margin: 48px 0 0;
-  color: #050505;
+  color: var(--parley-text);
   text-align: center;
 }
-
 .parley-research-summary strong {
-  color: #050505;
+  color: var(--parley-text);
   font-size: calc(var(--project-body-font-size) * 1.35);
   font-weight: 600;
   line-height: 1.45;
   letter-spacing: 0;
 }
-
 .parley-research-summary p {
   margin: 0;
-  color: #050505;
+  color: var(--parley-text);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.55;
   letter-spacing: 0;
 }
-
 .parley-research-source {
   max-width: 1120px;
   margin: 54px auto 0;
@@ -423,7 +373,6 @@
   line-height: 1.55;
   letter-spacing: 0;
 }
-
 .parley-research-source span {
   display: block;
   margin-top: 14px;
@@ -434,15 +383,13 @@
 .parley-persona-section {
   display: block;
   padding: 78px 18px 82px;
-  color: #050505;
-  background: #f9f9f9;
+  color: var(--parley-text);
+  background: var(--parley-bg);
 }
-
 .parley-persona-inner {
   width: 100%;
   margin: 0 auto;
 }
-
 .parley-persona-inner > h2 {
   margin: 0 0 42px;
   color: var(--parley-navy);
@@ -452,17 +399,14 @@
   text-align: center;
   letter-spacing: 0;
 }
-
 .parley-persona-layout {
   display: grid;
   gap: 34px;
 }
-
 .parley-persona-profile {
   border-radius: 8px;
   overflow: hidden;
 }
-
 .parley-persona-profile img {
   display: block;
   width: 100%;
@@ -470,29 +414,25 @@
   object-fit: cover;
   transition: transform 520ms ease;
 }
-
 .parley-persona-profile:hover img {
   transform: scale(1.025);
 }
-
 .parley-persona-info {
   display: grid;
   gap: 26px;
 }
-
 .parley-persona-quote {
   position: relative;
   margin: 0;
   padding: 0 34px 22px;
   border-bottom: 1px solid rgba(5, 5, 5, 0.35);
-  color: #050505;
+  color: var(--parley-text);
   font-family: var(--font-hand);
   font-size: calc(var(--project-body-font-size) * 1.25);
   font-weight: 500;
   line-height: 1.7;
   text-align: center;
 }
-
 .parley-persona-quote::before,
 .parley-persona-quote::after {
   position: absolute;
@@ -503,81 +443,68 @@
   line-height: 1;
   content: "“";
 }
-
 .parley-persona-quote::before {
   left: 0;
 }
-
 .parley-persona-quote::after {
   right: 0;
   content: "”";
 }
-
 .parley-persona-quote p {
   margin: 0;
 }
-
 .parley-persona-info h3 {
   margin: 0;
-  color: #050505;
+  color: var(--parley-text);
   font-size: calc(var(--project-title-font-size) * 0.82);
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: 0;
 }
-
 .parley-persona-info h3 span {
   font-size: calc(var(--project-body-font-size) * 1.08);
   font-weight: 700;
 }
-
 .parley-persona-list {
   display: grid;
   margin: 0;
 }
-
 .parley-persona-list div {
   display: grid;
   gap: 8px;
   padding: 18px 0;
   border-top: 1px solid rgba(5, 5, 5, 0.1);
 }
-
 .parley-persona-list dt {
   color: #06124a;
   font-size: var(--project-body-font-size);
   font-weight: 800;
   line-height: 1.45;
 }
-
 .parley-persona-list dd {
   margin: 0;
-  color: #050505;
+  color: var(--parley-text);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.6;
 }
-
 .parley-persona-detail {
   display: grid;
   gap: 28px;
   padding-top: 30px;
   border-top: 1px solid rgba(5, 5, 5, 0.12);
 }
-
 .parley-journey-block,
 .parley-needs-block,
 .parley-insight-block {
   display: grid;
   gap: 22px;
 }
-
 .parley-needs-block,
 .parley-insight-block {
   padding-top: 26px;
   border-top: 1px solid rgba(5, 5, 5, 0.12);
 }
-
 .parley-journey-block h3,
 .parley-needs-block h3,
 .parley-insight-block h3 {
@@ -588,13 +515,11 @@
   line-height: 1.35;
   letter-spacing: 0;
 }
-
 .parley-journey-block h3 span,
 .parley-needs-block h3 span,
 .parley-insight-block h3 span {
   font-size: inherit;
 }
-
 .parley-journey-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -604,7 +529,6 @@
   overflow: visible;
   list-style: none;
 }
-
 .parley-journey-list li {
   position: relative;
   display: grid;
@@ -613,18 +537,15 @@
   gap: 6px 14px;
   min-height: 74px;
   padding-bottom: 20px;
-  color: #050505;
+  color: var(--parley-text);
   text-align: left;
 }
-
 .parley-journey-list li:not(:last-child)::after {
   display: none;
 }
-
 .parley-journey-list li:not(:last-child)::before {
   display: none;
 }
-
 .parley-journey-list strong {
   position: relative;
   display: inline-flex;
@@ -639,34 +560,29 @@
   background: rgba(138, 210, 213, 0.16);
   transition: background 260ms ease, color 260ms ease, transform 260ms ease;
 }
-
 .parley-journey-list li:hover strong {
   color: var(--white);
   background: var(--parley-mint-hover);
   transform: scale(1.04);
 }
-
 .parley-journey-list li:hover strong em {
   color: var(--parley-navy);
   background: var(--white);
 }
-
 .parley-journey-list b {
   grid-column: 2;
-  color: #050505;
+  color: var(--parley-text);
   font-size: var(--project-body-font-size);
   font-weight: 800;
   line-height: 1.35;
 }
-
 .parley-journey-list li > span {
   grid-column: 2;
-  color: #050505;
+  color: var(--parley-text);
   font-size: calc(var(--project-body-font-size) * 0.9);
   font-weight: 500;
   line-height: 1.55;
 }
-
 .parley-journey-list .parley-journey-icon {
   display: inline-flex;
   flex: 0 0 24px;
@@ -681,7 +597,6 @@
   color: inherit;
   line-height: 1;
 }
-
 .parley-journey-icon svg {
   display: block;
   flex: 0 0 auto;
@@ -697,7 +612,6 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
 .parley-journey-list strong em {
   position: absolute;
   right: -5px;
@@ -716,7 +630,6 @@
   background: var(--parley-navy);
   transition: background 260ms ease, color 260ms ease;
 }
-
 .parley-needs-block ul {
   display: flex;
   flex-wrap: wrap;
@@ -725,34 +638,30 @@
   padding: 0;
   list-style: none;
 }
-
 .parley-needs-block li {
   padding: 10px 16px;
   border-radius: 6px;
-  color: #050505;
+  color: var(--parley-text);
   font-size: var(--project-body-font-size);
   font-weight: 700;
   line-height: 1;
   background: rgba(138, 210, 213, 0.16);
   transition: background 260ms ease, color 260ms ease, transform 260ms ease;
 }
-
 .parley-needs-block li:hover {
   color: var(--white);
   background: #66bdc2;
   transform: translateY(-2px);
 }
-
 .parley-insight-block p {
   position: relative;
   margin: 0;
   padding-left: 42px;
-  color: #050505;
+  color: var(--parley-text);
   font-size: calc(var(--project-body-font-size) * 1.2);
   font-weight: 600;
   line-height: 1.65;
 }
-
 .parley-insight-block p > span {
   position: absolute;
   top: 0;
@@ -769,12 +678,10 @@
   line-height: 1;
   background: rgba(138, 210, 213, 0.16);
 }
-
 .parley-insight-block strong {
   color: var(--parley-navy);
   font-weight: 800;
 }
-
 .parley-pain-point {
   display: grid;
   gap: 22px;
@@ -782,23 +689,20 @@
   padding: 26px 22px;
   border: 1px solid rgba(5, 5, 5, 0.12);
   border-radius: 8px;
-  color: #050505;
+  color: var(--parley-text);
   transition: border-color 260ms ease, box-shadow 260ms ease, transform 260ms ease;
 }
-
 .parley-pain-point:hover {
   border-color: rgba(102, 189, 194, 0.5);
   box-shadow: 0 18px 42px rgba(18, 119, 125, 0.09);
   transform: translateY(-3px);
 }
-
 .parley-pain-heading {
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
   gap: 4px 16px;
 }
-
 .parley-pain-heading span {
   display: inline-flex;
   align-items: center;
@@ -813,819 +717,23 @@
   line-height: 1;
   background: #06124a;
 }
-
 .parley-pain-heading strong {
   color: #06124a;
   font-size: calc(var(--project-body-font-size) * 1.25);
   font-weight: 800;
   line-height: 1.2;
 }
-
 .parley-pain-heading em {
-  color: #050505;
+  color: var(--parley-text);
   font-size: calc(var(--project-body-font-size) * 0.9);
   font-style: normal;
   font-weight: 500;
   line-height: 1.2;
 }
-
 .parley-pain-point p {
   margin: 0;
-  color: #050505;
+  color: var(--parley-text);
   font-size: var(--project-body-font-size);
   font-weight: 500;
   line-height: 1.65;
-}
-
-/*팔리 디자인 시스템 영역*/
-.parley-design-system-section {
-  display: block;
-  padding: 78px 18px 82px;
-  color: #050505;
-  background: #f9f9f9;
-}
-
-.parley-design-system-inner {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.parley-design-system-inner > h2 {
-  margin: 0 0 50px;
-  color: #050505;
-  font-size: 42px;
-  font-weight: 500;
-  line-height: 1.08;
-  text-align: center;
-  letter-spacing: 0;
-}
-
-.parley-color-system-layout {
-  display: grid;
-  gap: 28px;
-}
-
-.parley-color-system-copy {
-  display: grid;
-  align-content: center;
-  gap: 16px;
-}
-
-.parley-color-system-copy h3,
-.parley-typo-block > h3,
-.parley-wire-block h3 {
-  margin: 0;
-  color: #050505;
-  font-size: calc(var(--project-title-font-size) * 1.08);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: 0;
-}
-
-.parley-color-system-copy p {
-  min-width: 360px;
-  margin: 0;
-  color: #050505;
-  font-size: var(--project-body-font-size);
-  font-weight: 400;
-  line-height: 1.35;
-  letter-spacing: 0;
-}
-
-.parley-color-card-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.parley-color-card {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  overflow: hidden;
-  container-type: inline-size;
-  color: var(--white);
-  background: #222;
-}
-
-.parley-color-card::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: rgba(34, 34, 34, 0.34);
-}
-
-.parley-color-card img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.parley-color-chip {
-  position: absolute;
-  top: 9%;
-  left: 9%;
-  z-index: 2;
-  width: 26%;
-  height: 26%;
-  border-radius: 11%;
-}
-
-.parley-color-chip--navy {
-  background: #0c1552;
-}
-
-.parley-color-chip--light {
-  background: #eaebee;
-}
-
-.parley-color-chip--dark {
-  background: #222222;
-}
-
-.parley-color-card-copy {
-  position: absolute;
-  right: 8%;
-  bottom: 8%;
-  left: 8%;
-  z-index: 2;
-  color: var(--white);
-}
-
-.parley-color-card-copy strong {
-  display: block;
-  margin-bottom: 4%;
-  color: var(--white);
-  font-size: clamp(7px, 5.9cqw, 19px);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: 0;
-}
-
-.parley-color-card-copy p {
-  margin: 0;
-  color: var(--white);
-  font-size: clamp(6px, 4.8cqw, 16px);
-  font-weight: 600;
-  line-height: 1.38;
-  letter-spacing: 0;
-}
-
-/*팔리 타이포 영역*/
-.parley-typo-block {
-  display: grid;
-  gap: 28px;
-  margin-top: 80px;
-}
-
-.parley-typo-grid {
-  display: grid;
-  gap: 54px;
-}
-
-.parley-main-font > p,
-.parley-point-font > p {
-  margin: 0 0 18px;
-  color: #222;
-  font-size: var(--project-body-font-size);
-  font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: 0;
-}
-
-.parley-main-font > strong {
-  display: block;
-  margin-bottom: 30px;
-  color: #222;
-  font-size: 34px;
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: 0;
-}
-
-.parley-type-scale,
-.parley-point-scale {
-  display: grid;
-  gap: 16px;
-  margin: 0;
-}
-
-.parley-type-scale div,
-.parley-point-scale div {
-  display: grid;
-  grid-template-columns: minmax(86px, 0.68fr) minmax(130px, 1fr);
-  align-items: baseline;
-  gap: 18px;
-}
-
-.parley-type-scale dt,
-.parley-point-scale dt {
-  color: #222;
-  font-size: calc(var(--project-title-font-size) * 0.82);
-  font-weight: 800;
-  line-height: 1.25;
-  letter-spacing: 0;
-}
-
-.parley-type-scale dd,
-.parley-point-scale dd {
-  margin: 0;
-  color: #222;
-  font-size: calc(var(--project-title-font-size) * 0.82);
-  font-weight: 800;
-  line-height: 1.25;
-  letter-spacing: 0;
-}
-
-.parley-type-scale div:nth-child(1) dt,
-.parley-type-scale div:nth-child(1) dd {
-  font-size: calc(var(--project-title-font-size) * 1.12);
-  font-weight: 800;
-}
-
-.parley-type-scale div:nth-child(2) dt,
-.parley-type-scale div:nth-child(2) dd {
-  font-size: calc(var(--project-title-font-size) * 0.94);
-  font-weight: 800;
-}
-
-.parley-type-scale div:nth-child(3) dt,
-.parley-type-scale div:nth-child(3) dd {
-  font-size: calc(var(--project-body-font-size) * 1.16);
-  font-weight: 600;
-}
-
-.parley-wild-sample {
-  display: block;
-  margin: 0 0 32px;
-  color: #222;
-  font-family: var(--font-wild);
-  font-size: 58px;
-  font-weight: 400;
-  line-height: 0.9;
-  letter-spacing: 0;
-}
-
-/*팔리 와이어프레임 영역*/
-.parley-wire-block {
-  display: grid;
-  gap: 28px;
-  margin-top: 78px;
-}
-
-.parley-wire-block h3 {
-  margin-bottom: 4px;
-}
-
-.parley-wire-list {
-  position: relative;
-  display: grid;
-  align-items: start;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.parley-wire-list li {
-  position: relative;
-  display: grid;
-  align-self: start;
-  gap: 10px;
-}
-
-.parley-wire-button {
-  display: grid;
-  align-self: start;
-  gap: 10px;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  color: inherit;
-  text-align: inherit;
-  cursor: pointer;
-  background: transparent;
-}
-
-.parley-wire-list span {
-  display: block;
-  color: #d4d4d4;
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.1;
-  text-align: center;
-  letter-spacing: 0;
-  transition: color 220ms ease;
-}
-
-.parley-wire-list li.is-active span {
-  color: #0c1552;
-}
-
-.parley-wire-list img {
-  display: block;
-  width: 100%;
-  height: auto;
-  background: transparent;
-  opacity: 0.38;
-  transition: opacity 220ms ease, filter 220ms ease, transform 220ms ease;
-  filter: grayscale(1);
-  transform-origin: top center;
-}
-
-.parley-wire-list li.is-active img,
-.parley-wire-button:hover img,
-.parley-wire-button:focus-visible img {
-  opacity: 1;
-  transform: scale(1.04);
-  filter: grayscale(0);
-}
-
-.parley-wire-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  min-width: 0;
-  max-width: none;
-  min-height: 44px;
-  margin-top: 22px;
-  padding: 0 10px;
-  border: 0;
-  border-radius: 8px;
-  color: var(--white);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: 0;
-  background: #8ad2d5;
-  transition: background 220ms ease, transform 220ms ease;
-}
-
-.parley-wire-link:hover,
-.parley-wire-link:focus-visible {
-  color: var(--white);
-  background: #66bdc2;
-}
-
-/*팔리 코드 및 폴더 정리 영역*/
-.parley-code-section {
-  display: block;
-  padding: 78px 18px 82px;
-  color: var(--parley-ink);
-  background: var(--parley-bg);
-}
-
-.parley-code-inner {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.parley-code-inner > h2 {
-  margin: 0 0 54px;
-  color: var(--parley-navy);
-  font-size: calc(var(--project-title-font-size) * 2);
-  font-weight: 500;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0;
-}
-
-.parley-code-list {
-  display: grid;
-  gap: 58px;
-}
-
-.parley-code-item {
-  display: grid;
-  gap: 24px;
-}
-
-.parley-code-visual {
-  display: grid;
-  justify-items: center;
-  gap: 14px;
-}
-
-.parley-code-visual--pair {
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
-  align-items: end;
-}
-
-.parley-code-visual img {
-  display: block;
-  width: 100%;
-  max-width: 420px;
-  border-radius: 4px;
-  object-fit: contain;
-}
-
-.parley-code-visual--pair img {
-  max-width: 250px;
-}
-
-.parley-code-visual:not(.parley-code-visual--meeting) img {
-  box-shadow: 0 6px 14px rgba(12, 21, 82, 0.12);
-}
-
-.parley-code-visual--meeting {
-  position: relative;
-  display: block;
-  justify-self: center;
-  width: min(100%, 430px);
-  padding: 32px 22px;
-}
-
-.parley-code-meeting-bg {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  background:
-    linear-gradient(rgba(var(--parley-light-gray-rgb), 0.42), rgba(var(--parley-light-gray-rgb), 0.42)),
-    url("../image/parley/code-meeting-bg.jpg") center / cover no-repeat;
-}
-
-.parley-code-visual--meeting .parley-code-meeting-main {
-  position: relative;
-  z-index: 2;
-  width: 86%;
-  max-width: none;
-  margin: 0;
-  background: var(--white);
-  box-shadow: 0 10px 22px rgba(12, 21, 82, 0.18);
-}
-
-.parley-code-card {
-  display: grid;
-  gap: 14px;
-  padding: 22px 20px;
-  border-radius: 10px;
-  color: var(--parley-navy);
-  background: var(--parley-mint);
-  box-shadow: 0 4px 8px rgba(12, 21, 82, 0.16);
-}
-
-.parley-code-card h3 {
-  margin: 0;
-  color: var(--parley-navy);
-  font-size: calc(var(--project-title-font-size) * 0.78);
-  font-weight: 700;
-  line-height: 1.22;
-  letter-spacing: 0;
-}
-
-.parley-code-card p {
-  margin: 0;
-  color: var(--parley-light-text);
-  font-size: calc(var(--project-body-font-size) * 0.92);
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0;
-}
-
-/*팔리 데스크톱 구조 비교 영역*/
-.parley-desktop-section {
-  display: block;
-  padding: 78px 18px 82px;
-  color: var(--parley-navy);
-  background: var(--parley-bg);
-}
-
-.parley-desktop-inner {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.parley-desktop-inner > h2 {
-  margin: 0 0 54px;
-  color: var(--parley-navy);
-  font-size: calc(var(--project-title-font-size) * 2);
-  font-weight: 500;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0;
-}
-
-.parley-desktop-compare {
-  display: grid;
-  gap: 58px;
-}
-
-.parley-desktop-group {
-  display: grid;
-  gap: 18px;
-}
-
-.parley-desktop-group h3 {
-  justify-self: start;
-  min-width: 142px;
-  margin: 0;
-  padding: 12px 24px;
-  border-radius: 8px;
-  color: var(--parley-navy);
-  font-size: calc(var(--project-body-font-size) * 1.1);
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0;
-  background: var(--parley-mint);
-  box-shadow: 0 4px 8px rgba(12, 21, 82, 0.12);
-}
-
-.parley-desktop-grid,
-.parley-desktop-column {
-  display: grid;
-  align-items: start;
-  gap: 14px;
-}
-
-.parley-desktop-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.parley-desktop-shot {
-  display: block;
-  margin: 0;
-  border-radius: 5px;
-  overflow: hidden;
-  background: var(--white);
-  box-shadow: 0 4px 10px rgba(12, 21, 82, 0.14);
-}
-
-.parley-desktop-shot img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/*팔리 모바일 구조 비교 영역*/
-.parley-mobile-section {
-  display: block;
-  padding: 64px 18px 66px;
-  color: var(--parley-navy);
-  background: var(--parley-bg);
-}
-
-.parley-mobile-inner {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.parley-mobile-inner > h2 {
-  margin: 0 0 42px;
-  color: var(--parley-navy);
-  font-size: calc(var(--project-title-font-size) * 2);
-  font-weight: 500;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0;
-}
-
-.parley-mobile-compare {
-  display: grid;
-  gap: 42px;
-}
-
-.parley-mobile-group {
-  display: grid;
-  justify-items: center;
-  gap: 18px;
-}
-
-.parley-mobile-group h3 {
-  justify-self: start;
-  min-width: 142px;
-  margin: 0;
-  padding: 12px 24px;
-  border-radius: 8px;
-  color: var(--parley-navy);
-  font-size: calc(var(--project-body-font-size) * 1.1);
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0;
-  background: var(--parley-mint);
-  box-shadow: 0 4px 8px rgba(12, 21, 82, 0.12);
-}
-
-.parley-mobile-shot {
-  display: block;
-  width: min(100%, 620px);
-  margin: 0;
-  border-radius: 5px;
-  overflow: hidden;
-  background: transparent;
-}
-
-.parley-mobile-shot img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/*팔리 구조 개선 포인트 영역*/
-.parley-structure-point-section {
-  display: block;
-  padding: 0 18px 64px;
-  color: var(--parley-navy);
-  background: var(--parley-bg);
-}
-
-.parley-structure-point-inner {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.parley-structure-point-list {
-  display: grid;
-  gap: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.parley-structure-point-card {
-  position: relative;
-  display: grid;
-  gap: 14px;
-  padding: 22px 20px;
-  border-radius: 10px;
-  overflow: hidden;
-  color: var(--parley-navy);
-  background: var(--parley-mint);
-  box-shadow: 0 4px 8px rgba(12, 21, 82, 0.16);
-}
-
-.parley-structure-point-card h3,
-.parley-structure-point-card p {
-  position: relative;
-  z-index: 2;
-}
-
-.parley-structure-point-card h3 {
-  margin: 0;
-  color: var(--parley-navy);
-  font-size: calc(var(--project-title-font-size) * 0.78);
-  font-weight: 700;
-  line-height: 1.24;
-  text-align: center;
-  letter-spacing: 0;
-}
-
-.parley-structure-point-card p {
-  display: grid;
-  gap: 4px;
-  margin: 0;
-  color: var(--parley-light-text);
-  font-size: calc(var(--project-body-font-size) * 0.92);
-  font-weight: 400;
-  line-height: 1.55;
-  letter-spacing: 0;
-  word-break: keep-all;
-}
-
-.parley-structure-point-card span {
-  display: block;
-}
-
-/*팔리 최종 회고 영역*/
-.parley-outcome-section {
-  position: relative;
-  display: block;
-  padding: 176px 18px 210px;
-  overflow: hidden;
-  color: var(--parley-ink);
-  background: var(--parley-mint);
-}
-
-.parley-outcome-section::before {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 80px;
-  content: "";
-  background: var(--parley-bg);
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-}
-
-.parley-outcome-inner {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  gap: 18px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.parley-outcome-card {
-  display: grid;
-  gap: 12px;
-  padding: 22px 20px;
-  border-radius: 10px;
-  color: var(--parley-ink);
-  text-align: center;
-  background: var(--parley-bg);
-  box-shadow: 0 4px 8px rgba(12, 21, 82, 0.1);
-  transition: box-shadow 260ms ease, transform 260ms ease;
-}
-
-.parley-outcome-card:hover,
-.parley-outcome-card:focus-within {
-  box-shadow: 0 18px 36px rgba(12, 21, 82, 0.14);
-  transform: translateY(-4px);
-}
-
-.parley-outcome-card h3 {
-  margin: 0;
-  color: var(--parley-navy);
-  font-size: calc(var(--project-title-font-size) * 0.82);
-  font-style: italic;
-  font-weight: 600;
-  line-height: 1.2;
-  text-align: left;
-  letter-spacing: 0;
-}
-
-.parley-outcome-card p {
-  margin: 0;
-  color: var(--parley-ink);
-  font-size: calc(var(--project-body-font-size) * 0.92);
-  font-weight: 400;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0;
-  word-break: keep-all;
-}
-
-.parley-outcome-card br {
-  display: none;
-}
-
-.parley-outcome-section .project-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 24px 18px;
-  border-top: 1px solid rgba(12, 21, 82, 0.18);
-  color: var(--parley-navy);
-  font-size: 9px;
-  font-weight: 400;
-  line-height: 1.2;
-  background: transparent;
-}
-
-.parley-outcome-section .project-footer a {
-  color: inherit;
-}
-
-.parley-outcome-section.reveal .parley-outcome-card {
-  opacity: 0;
-  transform: translateY(34px);
-}
-
-.parley-outcome-section.reveal.is-visible .parley-outcome-card {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.parley-outcome-section.reveal.is-visible .parley-outcome-card:hover,
-.parley-outcome-section.reveal.is-visible .parley-outcome-card:focus-within {
-  transform: translateY(-4px);
-  transition-delay: 0ms;
-}
-
-.parley-outcome-section.reveal .parley-outcome-card {
-  transition: opacity 720ms ease, transform 720ms ease, box-shadow 260ms ease;
-}
-
-.parley-outcome-section.reveal .parley-outcome-card:nth-child(2) {
-  transition-delay: 90ms;
-}
-
-.parley-outcome-section.reveal .parley-outcome-card:nth-child(3) {
-  transition-delay: 180ms;
-}
-
-.parley-outcome-section.reveal .parley-outcome-card:nth-child(4) {
-  transition-delay: 270ms;
-}
-
-.parley-outcome-section.reveal .parley-outcome-card:nth-child(5) {
-  transition-delay: 360ms;
 }
