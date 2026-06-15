@@ -89,7 +89,6 @@
 
   const hero = document.querySelector(".about-hero");
   const photoWrap = document.querySelector(".about-photo-wrap");
-  const sideTitle = document.querySelector(".about-side-title");
   const keywordItems = document.querySelectorAll(".keyword-list li");
   const skillCards = document.querySelectorAll(".skill-card");
   const historyTrack = document.querySelector(".history-track");
@@ -103,19 +102,11 @@
       if (photoWrap) {
         photoWrap.style.transform = `translate(${x * 0.012}px, ${y * 0.01}px) rotate(-2deg)`;
       }
-
-      if (sideTitle) {
-        sideTitle.style.transform = `translate(${x * -0.01}px, ${y * 0.01}px) rotate(180deg)`;
-      }
     });
 
     hero.addEventListener("mouseleave", () => {
       if (photoWrap) {
         photoWrap.style.transform = "";
-      }
-
-      if (sideTitle) {
-        sideTitle.style.transform = "";
       }
     });
   }

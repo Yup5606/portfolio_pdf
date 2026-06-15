@@ -149,6 +149,18 @@
   line-height: 0.78;
   letter-spacing: -0.06em;
   writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  /* transition: none; */
+}
+
+.about-side-title.about-motion {
+  opacity: 0;
+  transform: rotate(180deg);
+  transition: opacity 0.8s ease;
+}
+
+.about-side-title.about-motion.is-visible {
+  opacity: 1;
   transform: rotate(180deg);
 }
 .about-photo-wrap {
